@@ -29,7 +29,7 @@ export default function Home() {
 	const [setTheme, colorTheme] = useDarkMode();
 
 	return (
-		<motion.div className="min-h-screen  transition duration-500 ease-in-out px-[2rem] md:px-[5rem] lg:px-[10rem] xl:px-[15rem] py-[2rem] dark:text-white">
+		<motion.div className="min-h-screen transition duration-500 ease-in-out page dark:text-white">
 			<motion.div
 				initial="initial"
 				animate="animate"
@@ -38,8 +38,12 @@ export default function Home() {
 				variants={slideDown}
 				className=""
 			>
-				<motion.h2 className="mb-5 text-6xl font-semibold text-black dark:text-white">
-					Hello, I'm Bo 👋🏽
+				<motion.h2 className="mb-5 text-6xl font-semibold text-black dark:text-white sub">
+					Hello, I'm{" "}
+					<span className="text-transparent bg-gradient-to-r from-orange-900 to-yellow-400 bg-clip-text">
+						Bo
+					</span>{" "}
+					👋🏽
 				</motion.h2>
 
 				<motion.h2 className="text-2xl text-[#000000a7] dark:text-[#b0b0b0]  mb-5">
