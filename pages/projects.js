@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { slideDown } from ".";
+import Head from "next/head";
 
 export default function projects() {
 	return (
@@ -11,7 +12,10 @@ export default function projects() {
 			variants={slideDown}
 			className="page"
 		>
-			<h1 className="text-6xl font-bold dark:text-white">Projects</h1>
+			<Head>
+				<title>Projects 🧠</title>
+			</Head>
+			<h1 className="text-6xl font-bold dark:text-white">Projects 🧠</h1>
 		</motion.div>
 	);
 }
