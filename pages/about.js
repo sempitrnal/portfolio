@@ -9,9 +9,9 @@ export default function about() {
 			animate="animate"
 			exit="exit"
 			variants={slideDown}
-			className="min-h-screen px-[15rem] py-[2rem]"
+			className="min-h-screen px-[2rem] md:px-[5rem] lg:px-[10rem] xl:px-[15rem] py-[2rem]"
 		>
-			<h1 className="font-semibold dark:text-white text-7xl">About</h1>
+			<h1 className="text-6xl font-semibold dark:text-white">About</h1>
 		</motion.div>
 	);
 }

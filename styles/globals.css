@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+	body {
+		@apply dark:bg-[#1d201f] transition duration-500;
+	}
+}
+
+@layer components {
+	.page {
+		@apply min-h-screen;
+		@apply px-[2rem] md:px-[5rem] lg:px-[10rem] xl:px-[15rem] py-[2rem];
+	}
+}

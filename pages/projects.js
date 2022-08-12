@@ -9,9 +9,9 @@ export default function projects() {
 			animate="animate"
 			exit="exit"
 			variants={slideDown}
-			className="min-h-screen px-[15rem] py-[2rem]"
+			className="page"
 		>
-			<h1 className="font-bold dark:text-white text-7xl">Projects</h1>
+			<h1 className="text-6xl font-bold dark:text-white">Projects</h1>
 		</motion.div>
 	);
 }
