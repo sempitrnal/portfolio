@@ -5,6 +5,7 @@ import { FiSun, FiMoon } from "react-icons/fi";
 import { HiMoon, HiSun } from "react-icons/hi";
 import { useState, useEffect } from "react";
 import { BsFillMoonStarsFill, BsMoonFill } from "react-icons/bs";
+import ToolTip from "./ToolTip";
 const isDark = () => {
 	if (typeof window !== "undefined") {
 		return (
@@ -31,28 +32,41 @@ export default function DarkMode() {
 	}, []);
 	const darkModeActive =
 		process.browser && document.documentElement.classList.contains("dark");
-
+	const [showDarkModeTooltip, setShowDarkModeTooltip] = useState(false);
 	return (
 		<AnimatePresence exitBeforeEnter initial={false}>
-			<motion.button
-				className="z-20 px-2 text-lg text-yellow-500 focus:outline-none "
-				onClick={() => toggleMode()}
-				key={darkModeActive ? "dark-icon" : "light-icon"}
-				initial={{ x: -20, y: -20, opacity: 0 }}
-				animate={{ x: 0, y: 0, opacity: 1 }}
-				exit={{ x: 20, y: 20, opacity: 0 }}
-				transition={{ duration: 0.2 }}
-			>
-				{darkModeActive ? (
-					<div className="">
-						<HiSun />
-					</div>
-				) : (
-					<div className="scale-75 text-slate-500">
-						<BsMoonFill />
-					</div>
+			<div className="relative">
+				<motion.button
+					onHoverStart={() =>
+						setTimeout(() => {
+							setShowDarkModeTooltip(true);
+						}, 300)
+					}
+					onHoverEnd={() => setShowDarkModeTooltip(false)}
+					className="z-20 px-8 text-2xl text-yellow-500 focus:outline-none "
+					onClick={() => toggleMode()}
+					key={darkModeActive ? "dark-icon" : "light-icon"}
+					initial={{ x: -20, y: -20, opacity: 0 }}
+					animate={{ x: 0, y: 0, opacity: 1 }}
+					exit={{ x: 20, y: 20, opacity: 0 }}
+					transition={{ duration: 0.2 }}
+				>
+					{darkModeActive ? (
+						<div className="">
+							<HiSun />
+						</div>
+					) : (
+						<div className="transition-colors duration-300 scale-75 text-slate-500 hover:text-slate-600">
+							<BsMoonFill />
+						</div>
+					)}
+				</motion.button>
+				{showDarkModeTooltip && (
+					<ToolTip
+						text={darkModeActive ? "Toggle light mode" : "Toggle dark mode"}
+					/>
 				)}
-			</motion.button>
+			</div>
 		</AnimatePresence>
 	);
 }
