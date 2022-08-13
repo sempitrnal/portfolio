@@ -68,11 +68,14 @@ export default function Nav() {
 					);
 				})}
 
-				<div className="hidden md:block translate-y-[2px]">
+				<div className="hidden md:block translate-y-[2px] mx-8">
 					<DarkMode />
 				</div>
 			</div>
 			<div className="flex gap-3 md:hidden ">
+				<div className="md:hidden">
+					<DarkMode />
+				</div>
 				<motion.div
 					initial="initial"
 					animate="animate"
@@ -90,9 +93,6 @@ export default function Nav() {
 						</motion.div>
 					)}
 				</motion.div>
-				<div className="md:hidden">
-					<DarkMode />
-				</div>
 			</div>
 		</nav>
 	);
