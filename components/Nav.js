@@ -45,7 +45,7 @@ export default function Nav() {
 							<Link key={i} href={e.path} scroll={false}>
 								<div
 									onClick={() => setNavOpen(false)}
-									className={`relative z-10 flex justify-center px-3 py-1 cursor-pointer ${
+									className={`relative z-10 flex justify-center px-3 py-2 cursor-pointer ${
 										router.route !== e.path ? "hover:opacity-80" : ""
 									}`}
 								>
@@ -69,7 +69,7 @@ export default function Nav() {
 						);
 					})}
 				</div>
-				<div className="mx-1 md:mx-8 md:block md:translate-y-[2px]">
+				<div className="mx-4 md:mx-8 md:block md:translate-y-[2px]">
 					<DarkMode />
 				</div>
 				<motion.div
