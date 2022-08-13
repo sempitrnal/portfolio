@@ -34,46 +34,42 @@ export default function Nav() {
 			<Link href={"/"}>
 				<p className="cursor-pointer dark:text-white sm:hidden">BS</p>
 			</Link>
-			<div
-				className={`fixed  overflow-hidden transition-[bottom] duration-500 left-0 right-0 flex flex-col items-center  shadow-lg bg-[#ffffff] md:gap-1 md:flex-row top-[0px] mt-20 md:static leading-[5rem] md:leading-none md:shadow-none md:mt-0  ${
-					navOpen ? "bottom-[0%]" : "bottom-[100%]"
-				} dark:bg-[#111] md:bg-transparent md:dark:bg-transparent`}
-			>
-				{nav.map((e, i) => {
-					return (
-						<Link key={i} href={e.path} scroll={false}>
-							<div
-								onClick={() => setNavOpen(false)}
-								className={`relative z-10 flex justify-center px-3 py-1 cursor-pointer ${
-									router.route !== e.path ? "hover:opacity-80" : ""
-								}`}
-							>
-								<p
-									className={`transition-colors duration-500 ${
-										router.route === e.path
-											? "md:text-white text-purple-800 dark:text-purple-500 md:dark:text-black"
-											: ""
-									} dark:text-white`}
+			<div className="flex">
+				<div
+					className={`fixed overflow-hidden md:overflow-visible transition-[bottom] duration-500 left-0 right-0 flex flex-col items-center  shadow-lg bg-[#ffffff] md:gap-1 md:flex-row top-[0px] mt-20 md:static leading-[5rem] md:leading-none md:shadow-none md:mt-0  ${
+						navOpen ? "bottom-[0%]" : "bottom-[100%]"
+					} dark:bg-[#111] md:bg-transparent md:dark:bg-transparent`}
+				>
+					{nav.map((e, i) => {
+						return (
+							<Link key={i} href={e.path} scroll={false}>
+								<div
+									onClick={() => setNavOpen(false)}
+									className={`relative z-10 flex justify-center px-3 py-1 cursor-pointer ${
+										router.route !== e.path ? "hover:opacity-80" : ""
+									}`}
 								>
-									{e.label}
-								</p>
-								{router.route === e.path && (
-									<motion.div
-										layoutId="bg"
-										className="hidden md:block w-full h-full absolute top-0 rounded-md bg-gradient-to-r from-[#7243a4]  to-[#060606] dark:from-slate-300 dark:to-slate-100 z-[-5] "
-									></motion.div>
-								)}
-							</div>
-						</Link>
-					);
-				})}
-
-				<div className="hidden md:block translate-y-[2px] mx-8">
-					<DarkMode />
+									<p
+										className={`transition-colors duration-500 ${
+											router.route === e.path
+												? "md:text-white text-purple-800 dark:text-purple-500 md:dark:text-black"
+												: ""
+										} dark:text-white`}
+									>
+										{e.label}
+									</p>
+									{router.route === e.path && (
+										<motion.div
+											layoutId="bg"
+											className="hidden md:block w-full h-full absolute top-0 rounded-md bg-gradient-to-r from-[#7243a4]  to-[#060606] dark:from-slate-300 dark:to-slate-100 z-[-5] "
+										></motion.div>
+									)}
+								</div>
+							</Link>
+						);
+					})}
 				</div>
-			</div>
-			<div className="flex gap-3 md:hidden ">
-				<div className="md:hidden ">
+				<div className="mx-1 md:mx-8 md:block md:translate-y-[2px]">
 					<DarkMode />
 				</div>
 				<motion.div
