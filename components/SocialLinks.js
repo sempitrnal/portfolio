@@ -15,7 +15,7 @@ const socials = [
 	},
 	{
 		name: "LinkedIn",
-		link: "www.linkedin.com/in/sampeloreynald",
+		link: "https://linkedin.com/in/sampeloreynald",
 		icon: <FaLinkedinIn />,
 	},
 	{

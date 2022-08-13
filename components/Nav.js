@@ -1,18 +1,29 @@
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
 import DarkMode from "./DarkMode";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { useRouter } from "next/router";
+import { useState } from "react";
+import { HiMenu } from "react-icons/hi";
+import { MdClose } from "react-icons/md";
 
 export default function Nav() {
 	const nav = [
 		{ label: "Home", path: "/" },
-		{ label: "About", path: "/about" },
+		{ label: "Experience", path: "/experience" },
 		{ label: "Projects", path: "/projects" },
 	];
-
+	const scaleUp = {
+		initial: {
+			scale: 0,
+			opacity: 0.8,
+		},
+		animate: {
+			scale: 1,
+			opacity: 1,
+		},
+	};
 	const router = useRouter();
-
+	const [navOpen, setNavOpen] = useState(false);
 	return (
 		<nav className="z-50  sticky top-0 transition duration-500 px-[2rem] md:px-[5rem] lg:px-[10rem] xl:px-[15rem]  bg-white py-7 border-b border-[#e9e9e9] flex items-center justify-between dark:bg-[#111] dark:border-[#1f2020]">
 			<Link href={"/"}>
@@ -23,18 +34,25 @@ export default function Nav() {
 			<Link href={"/"}>
 				<p className="cursor-pointer dark:text-white sm:hidden">BS</p>
 			</Link>
-			<div className="flex items-center gap-1">
+			<div
+				className={`fixed  overflow-hidden transition-[bottom] duration-500 left-0 right-0 flex flex-col items-center  shadow-lg bg-[#ffffff] md:gap-1 md:flex-row top-[0px] mt-20 md:static leading-[5rem] md:leading-none md:shadow-none md:mt-0  ${
+					navOpen ? "bottom-[0%]" : "bottom-[100%]"
+				} dark:bg-[#111]`}
+			>
 				{nav.map((e, i) => {
 					return (
 						<Link key={i} href={e.path} scroll={false}>
 							<div
+								onClick={() => setNavOpen(false)}
 								className={`relative z-10 flex justify-center px-3 py-1 cursor-pointer ${
 									router.route !== e.path ? "hover:opacity-80" : ""
 								}`}
 							>
 								<p
 									className={`transition-colors duration-500 ${
-										router.route === e.path ? "text-white dark:text-black" : ""
+										router.route === e.path
+											? "md:text-white text-purple-800 dark:text-purple-500 md:dark:text-black"
+											: ""
 									} dark:text-white`}
 								>
 									{e.label}
@@ -42,14 +60,37 @@ export default function Nav() {
 								{router.route === e.path && (
 									<motion.div
 										layoutId="bg"
-										className="w-full h-full absolute top-0 rounded-md bg-gradient-to-r from-slate-900 to-slate-800 dark:from-slate-300 dark:to-slate-100 z-[-5] "
+										className="hidden md:block w-full h-full absolute top-0 rounded-md bg-gradient-to-r from-[#7243a4]  to-[#060606] dark:from-slate-300 dark:to-slate-100 z-[-5] "
 									></motion.div>
 								)}
 							</div>
 						</Link>
 					);
-				})}{" "}
-				<div className="translate-y-[2px]">
+				})}
+
+				<div className="hidden md:block translate-y-[2px]">
+					<DarkMode />
+				</div>
+			</div>
+			<div className="flex gap-3 ">
+				<motion.div
+					initial="initial"
+					animate="animate"
+					onClick={() => setNavOpen(!navOpen)}
+					className="text-2xl transition-opacity duration-300 cursor-pointer md:hidden hover:opacity-70 dark:text-white"
+				>
+					{navOpen && (
+						<motion.div variants={scaleUp} className="">
+							<MdClose />
+						</motion.div>
+					)}
+					{!navOpen && (
+						<motion.div variants={scaleUp} className="">
+							<HiMenu />
+						</motion.div>
+					)}
+				</motion.div>
+				<div className="md:hidden">
 					<DarkMode />
 				</div>
 			</div>
