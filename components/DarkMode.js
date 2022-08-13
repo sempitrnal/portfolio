@@ -1,10 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { useTheme } from "next-themes";
-import useDarkMode from "../hooks/useDarkMode";
-import { FiSun, FiMoon } from "react-icons/fi";
-import { HiMoon, HiSun } from "react-icons/hi";
+import { HiSun } from "react-icons/hi";
 import { useState, useEffect } from "react";
-import { BsFillMoonStarsFill, BsMoonFill } from "react-icons/bs";
+import { BsMoonFill } from "react-icons/bs";
 import ToolTip from "./ToolTip";
 const isDark = () => {
 	if (typeof window !== "undefined") {
@@ -32,24 +29,20 @@ export default function DarkMode() {
 	}, []);
 	const darkModeActive =
 		process.browser && document.documentElement.classList.contains("dark");
-	const [showDarkModeTooltip, setShowDarkModeTooltip] = useState(false);
+	const [hovered, setHovered] = useState(false);
 	return (
 		<AnimatePresence exitBeforeEnter initial={false}>
 			<div className="relative">
 				<motion.button
-					onHoverStart={() =>
-						setTimeout(() => {
-							setShowDarkModeTooltip(true);
-						}, 300)
-					}
-					onHoverEnd={() => setShowDarkModeTooltip(false)}
-					className="z-20 px-8 text-2xl text-yellow-500 focus:outline-none "
-					onClick={() => toggleMode()}
+					className="z-20 text-2xl text-yellow-500 focus:outline-none "
+					onClick={() => {
+						toggleMode();
+					}}
 					key={darkModeActive ? "dark-icon" : "light-icon"}
 					initial={{ x: -20, y: -20, opacity: 0 }}
 					animate={{ x: 0, y: 0, opacity: 1 }}
 					exit={{ x: 20, y: 20, opacity: 0 }}
-					transition={{ duration: 0.2 }}
+					transition={{ duration: 0.5 }}
 				>
 					{darkModeActive ? (
 						<div className="">
@@ -61,7 +54,7 @@ export default function DarkMode() {
 						</div>
 					)}
 				</motion.button>
-				{showDarkModeTooltip && (
+				{hovered && (
 					<ToolTip
 						text={darkModeActive ? "Toggle light mode" : "Toggle dark mode"}
 					/>
