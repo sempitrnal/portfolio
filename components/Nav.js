@@ -73,7 +73,7 @@ export default function Nav() {
 				</div>
 			</div>
 			<div className="flex gap-3 md:hidden ">
-				<div className="md:hidden">
+				<div className="md:hidden ">
 					<DarkMode />
 				</div>
 				<motion.div
