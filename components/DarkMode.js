@@ -19,6 +19,7 @@ export default function DarkMode() {
 		localStorage.theme = getTheme(!isDarkMode);
 		if (localStorage.theme === "dark") {
 			document.documentElement.classList.add("dark");
+			document.documentElement.classList.remove("light");
 		} else {
 			document.documentElement.classList.remove("dark");
 		}
