@@ -32,9 +32,7 @@ export default function Nav() {
 					Reynald Sampelo
 				</p>
 			</Link>
-			<Link href={"/"}>
-				<p className="cursor-pointer dark:text-white sm:hidden">BS</p>
-			</Link>
+
 			<div className="flex">
 				<div
 					className={`fixed overflow-hidden md:overflow-visible transition-[bottom] duration-500 left-0 right-0 flex flex-col items-center  shadow-lg bg-[#ffffff] md:gap-1 md:flex-row top-[0px] mt-20 md:static leading-[5rem] md:leading-none md:shadow-none md:mt-0  ${
