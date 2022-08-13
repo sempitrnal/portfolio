@@ -69,7 +69,7 @@ export default function Nav() {
 						);
 					})}
 				</div>
-				<div className="mx-1 md:mx-8 md:block md:translate-y-[2px]">
+				<div className="mx-4 md:mx-8 md:block md:translate-y-[2px]">
 					<DarkMode />
 				</div>
 				<motion.div
