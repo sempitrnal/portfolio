@@ -37,7 +37,7 @@ export default function Nav() {
 			<div
 				className={`fixed  overflow-hidden transition-[bottom] duration-500 left-0 right-0 flex flex-col items-center  shadow-lg bg-[#ffffff] md:gap-1 md:flex-row top-[0px] mt-20 md:static leading-[5rem] md:leading-none md:shadow-none md:mt-0  ${
 					navOpen ? "bottom-[0%]" : "bottom-[100%]"
-				} dark:bg-[#111]`}
+				} dark:bg-[#111] md:bg-transparent md:dark:bg-transparent`}
 			>
 				{nav.map((e, i) => {
 					return (
@@ -72,7 +72,7 @@ export default function Nav() {
 					<DarkMode />
 				</div>
 			</div>
-			<div className="flex gap-3 ">
+			<div className="flex gap-3 md:hidden ">
 				<motion.div
 					initial="initial"
 					animate="animate"
