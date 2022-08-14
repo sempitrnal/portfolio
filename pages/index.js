@@ -38,7 +38,18 @@ export default function Home() {
 				<title>Reynald Sampelo</title>
 			</Head>
 			<div className="flex flex-col items-center justify-center h-screen">
-				<h1 className="mb-5 md:mb-10 text-7xl md:text-9xl">Building...</h1>
+				<div className="flex text-7xl md:text-9xl">
+					<h1 className="mb-5 md:mb-10 ">Building</h1>
+					<Typewriter
+						options={{
+							autoStart: true,
+							strings: ["..."],
+							deleteSpeed: 150,
+							cursor: "",
+							loop: true,
+						}}
+					/>
+				</div>
 				<h3 className="md:text-xl">
 					Still working on my website <span className="mx-2">😄</span>
 				</h3>

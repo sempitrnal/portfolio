@@ -35,7 +35,7 @@ export default function Home() {
 	return (
 		<motion.div className="min-h-screen transition duration-500 ease-in-out dark:text-white">
 			<Head>
-				<title>Reynald Sampelo</title>
+				<title>Not Found</title>
 			</Head>
 			<div className="flex flex-col items-center justify-center h-screen">
 				<h1 className="mb-5 md:mb-10 text-7xl md:text-9xl">Building...</h1>
