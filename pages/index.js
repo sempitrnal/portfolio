@@ -33,11 +33,17 @@ export default function Home() {
 	const [setTheme, colorTheme] = useDarkMode();
 
 	return (
-		<motion.div className="min-h-screen transition duration-500 ease-in-out page dark:text-white">
+		<motion.div className="min-h-screen transition duration-500 ease-in-out dark:text-white">
 			<Head>
 				<title>Reynald Sampelo</title>
 			</Head>
-			<motion.div
+			<div className="flex flex-col items-center justify-center h-screen">
+				<h1 className="mb-5 md:mb-10 text-7xl md:text-9xl">Building...</h1>
+				<h3 className="md:text-xl">
+					Still working on my website <span className="mx-2">😄</span>
+				</h3>
+			</div>
+			{/* <motion.div
 				initial="initial"
 				animate="animate"
 				exit="exit"
@@ -78,7 +84,7 @@ export default function Home() {
 						}}
 					/>
 				</div>
-			</motion.div>
+			</motion.div> */}
 		</motion.div>
 	);
 }
