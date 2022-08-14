@@ -22,7 +22,7 @@ function MyApp({ Component, pageProps, router }) {
 
 	return (
 		<>
-			<Nav />
+			{/* <Nav /> */}
 			<AnimatePresence exitBeforeEnter initial={false}>
 				<Component {...pageProps} key={router.route} />
 			</AnimatePresence>
