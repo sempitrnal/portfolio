@@ -38,10 +38,7 @@ export default function Home() {
 				<title>Not Found</title>
 			</Head>
 			<div className="flex flex-col items-center justify-center h-screen">
-				<h1 className="mb-5 md:mb-10 text-7xl md:text-9xl">Building...</h1>
-				<h3 className="md:text-xl">
-					Still working on my website <span className="mx-2">😄</span>
-				</h3>
+				<h1 className="mb-5 md:mb-10 md:text-5xl">Page not found :(</h1>
 			</div>
 			{/* <motion.div
 				initial="initial"

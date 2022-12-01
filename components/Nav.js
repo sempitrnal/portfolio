@@ -2,7 +2,7 @@ import Link from "next/link";
 import DarkMode from "./DarkMode";
 import { AnimatePresence, motion } from "framer-motion";
 import { useRouter } from "next/router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { HiMenu } from "react-icons/hi";
 import { MdClose } from "react-icons/md";
 
@@ -11,7 +11,7 @@ export default function Nav() {
 		{ label: "Home", path: "/" },
 		{ label: "Experience", path: "/experience" },
 		{ label: "Projects", path: "/projects" },
-		{ label: "Contact", path: "/contact" },
+		// { label: "Contact", path: "/contact" },
 	];
 	const scaleUp = {
 		initial: {
@@ -25,10 +25,21 @@ export default function Nav() {
 	};
 	const router = useRouter();
 	const [navOpen, setNavOpen] = useState(false);
+	const [innerWidth, setInnerWidth] = useState();
+	useEffect(() => {
+		const hello = () => {
+			setInnerWidth(window.innerWidth);
+		};
+		window.addEventListener("resize", hello);
+		if (window.innerWidth > 767) {
+			setNavOpen(false);
+		}
+		return () => window.removeEventListener("resize", hello);
+	});
 	return (
-		<nav className="z-50  sticky top-0 transition duration-500 px-[2rem] md:px-[5rem] lg:px-[10rem] xl:px-[15rem]  bg-white py-7 border-b border-[#e9e9e9] flex items-center justify-between dark:bg-[#111] dark:border-[#1f2020]">
+		<nav className="z-50  sticky top-0 transition duration-500 px-[2rem] md:px-[5rem] lg:px-[10rem] xl:px-[15rem] 2xl:px-[20rem]  bg-white py-7 border-b border-[#e9e9e9] flex items-center justify-between dark:bg-[#111] dark:border-[#1f2020]">
 			<Link href={"/"}>
-				<p className="cursor-pointer  dark:text-white sm:block">
+				<p className="text-xl font-semibold text-[#3c3c3c] transition duration-500 cursor-pointer dark:text-white sm:block">
 					Reynald Sampelo
 				</p>
 			</Link>

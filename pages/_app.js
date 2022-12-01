@@ -4,23 +4,23 @@ import Nav from "../components/Nav";
 import { AnimatePresence } from "framer-motion";
 import Router, { useRouter } from "next/router";
 import { useEffect } from "react";
+import useDarkMode from "../hooks/useDarkMode";
+import Footer from "../components/Footer";
 
 function MyApp({ Component, pageProps, router }) {
-	useEffect(() => {
-		// On page load or when changing themes, best to add inline in `head` to avoid FOUC
-		if (localStorage.theme === "dark") {
-			document.documentElement.classList.add("dark");
-			document.documentElement.classList.remove("light");
-		} else {
-			document.documentElement.classList.remove("dark");
-		}
-	});
-
+	const [setTheme, colorTheme] = useDarkMode();
 	return (
 		<>
-			{/* <Nav /> */}
-			<AnimatePresence exitBeforeEnter initial={false}>
+			<Nav />
+			<AnimatePresence
+				exitBeforeEnter
+				initial={false}
+				onExitComplete={() => window.scrollTo(0, 0)}
+			>
 				<Component {...pageProps} key={router.route} />
+			</AnimatePresence>
+			<AnimatePresence>
+				<Footer key={router.route} />
 			</AnimatePresence>
 		</>
 	);
