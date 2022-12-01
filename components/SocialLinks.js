@@ -34,7 +34,7 @@ export default function SocialLinks() {
 						target="_blank"
 						key={e.name}
 						href={e.link}
-						className={`${e.color} text-[#3d3d3d] dark:text-white text-[1.3rem] saturate-0 hover:opacity-100 transition duration-500 opacity-70 `}
+						className={`${e.color} text-[#3d3d3d] dark:text-white text-[2rem] saturate-0 hover:opacity-100 transition duration-500 opacity-70 `}
 						rel="noreferrer"
 					>
 						{e.icon}
