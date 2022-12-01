@@ -28,7 +28,7 @@ const ProjectCard = ({ e }) => {
 	return (
 		<div className="px-10 py-16 bg-white rounded-lg shadow-md">
 			<h1 className="mb-3 text-3xl">{e.name}</h1>
-			<div className="flex gap-3">
+			<div className="flex flex-wrap gap-3">
 				{e.stack.map((e) => (
 					<p
 						className={`px-3 py-1 text-sm font-semibold rounded-lg ${

@@ -9,7 +9,7 @@ const Footer = () => {
 			transition={{
 				duration: 0.3,
 			}}
-			className="px-[14.8rem] flex flex-col items-center justify-center"
+			className="flex flex-col items-center justify-center w-full "
 		>
 			<hr />
 			<SocialLinks />
