@@ -179,35 +179,21 @@ export default function Home() {
 						<motion.p className="paragraph">
 							My name is Reynald Sampelo and I am an Information Technology
 							student who is passionate and has innate curiosity about{" "}
-							<span className="highlight text-[#3e9484] dark:text-[#78e2cf] ">
-								{" "}
-								Software Development.{" "}
-							</span>
-							I aspire to be a full-stack developer who can adapt quickly and
+							<span className="highlight "> Software Development. </span>I
+							aspire to be a full-stack developer who can adapt quickly and
 							easily grasp emerging technologies.
 						</motion.p>
 						<p className="paragraph">
 							I am interested in learning more about Web and Mobile Application
 							Development. I am comfortable on working with{" "}
-							<span className="highlight text-[#5aaac2] dark:text-[#50d6ff]">
-								ReactJS
-							</span>{" "}
-							and{" "}
-							<span className="text-black highlight dark:text-white">
-								NextJS
-							</span>{" "}
-							on my projects. I am also yet to learn about{" "}
-							<span className="highlight dark:text-[rgb(198,190,255)] text-[#4e468b]">
-								BaaS
-							</span>{" "}
-							such as{" "}
-							<span className="highlight text-[#fca03e]">Firebase </span> &{" "}
-							<span className="highlight text-[#6ad279]">Supabase</span> to
-							integrate on my projects. I also ought to start learning{" "}
-							<span className="highlight text-[#5aaac2] dark:text-[#50d6ff]">
-								React Native{" "}
-							</span>{" "}
-							as my main Mobile App Tech Stack.
+							<span className=" highlight">ReactJS</span> and{" "}
+							<span className=" highlight">NextJS</span> on my projects. I am
+							also yet to learn about <span className="highlight">BaaS</span>{" "}
+							such as <span className=" highlight">Firebase </span> &{" "}
+							<span className="highlight">Supabase</span> to integrate on my
+							projects. I also ought to start learning{" "}
+							<span className="highlight">React Native </span> as my main Mobile
+							App Tech Stack.
 						</p>
 						<p className="paragraph">
 							Other than coding, I spend my time to practice{" "}

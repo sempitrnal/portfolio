@@ -29,6 +29,7 @@ export default function Nav() {
 	const [scrollY, setScrollY] = useState();
 	const [hideNav, setHide] = useState();
 	// eslint-disable-next-line react-hooks/exhaustive-deps
+
 	useEffect(() => {
 		const hello = () => {
 			setInnerWidth(window.innerWidth);
@@ -42,7 +43,8 @@ export default function Nav() {
 				document.querySelector("nav").classList.add("shadow-lg");
 				document.querySelector("nav").classList.remove("py-7");
 				document.querySelector("nav").classList.add("py-5");
-				if (window.scrollY > scrollY && innerWidth > 767) {
+				console.log(innerWidth);
+				if (window.scrollY > scrollY && window.innerWidth > 767) {
 					setHide(true);
 				} else {
 					setHide(false);
