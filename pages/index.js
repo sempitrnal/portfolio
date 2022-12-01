@@ -90,7 +90,7 @@ export default function Home() {
 					className=""
 				>
 					<div className="flex flex-col items-center justify-between gap-10 lg:items-end lg:flex-row">
-						<div className="relative lg:hidden">
+						<div className="relative lg:hidden w-[15rem] h-[15rem] lg:w-[22rem] lg:h-[22rem]">
 							<motion.div className="absolute z-[9999] top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
 								<ClipLoader
 									cssOverride={{ borderWidth: "3px" }}
@@ -143,7 +143,7 @@ export default function Home() {
 								</div>
 							</a>
 						</div>
-						<div className="relative">
+						<div className=" w-[15rem] h-[15rem]  lg:block relative lg:w-[22rem] lg:h-[22rem]">
 							<motion.div className="absolute z-[9999] top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
 								<ClipLoader
 									cssOverride={{ borderWidth: "3px" }}
@@ -153,7 +153,7 @@ export default function Home() {
 								></ClipLoader>
 							</motion.div>
 							<div
-								className={`hidden w-[15rem] h-[15rem] overflow-hidden rounded-full  lg:block relative lg:w-[22rem] lg:h-[22rem] ease-in-out duration-[1s] ${
+								className={`hidden w-[15rem] h-[15rem] overflow-hidden rounded-full  lg:block relative lg:w-[22rem] lg:h-[22rem] ease-in-out duration-[.5s] ${
 									isLoading
 										? "blur-md scale-110 opacity-70 "
 										: "blur-0 opacity-100 scale-100"
