@@ -143,7 +143,7 @@ export default function Home() {
 								</div>
 							</a>
 						</div>
-						<div className=" w-[15rem] h-[15rem]  lg:block relative lg:w-[22rem] lg:h-[22rem]">
+						<div className="hidden w-[15rem] h-[15rem]  lg:block relative lg:w-[22rem] lg:h-[22rem]">
 							<motion.div className="absolute  top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
 								<ClipLoader
 									cssOverride={{ borderWidth: "3px" }}
