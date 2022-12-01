@@ -1,13 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url("https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap");
+@import "@fontsource/nanum-pen-script";
+.asd {
+	font-family: "Nanum Pen Script", cursive;
+}
 @layer base {
 	body {
 		@apply dark:bg-[#111111] transition duration-500;
 	}
 }
-
+@font-face {
+	font-family: "Pacifico";
+	src: url("/fonts/Pacifico.ttf");
+	font-style: medium;
+	font-weight: normal;
+	font-display: swap;
+}
 @layer components {
 	.page {
 		@apply min-h-screen;

@@ -118,7 +118,7 @@ export default function Home() {
 					</div> */}
 
 					<div className="flex flex-col items-start min-h-[60vh] mb-[10rem] justify-center lg:items-start lg:text-start">
-						<p className="text-2xl  md:text-4xl font-['Nanum_Pen_Script'] text-black transition duration-500 translate-x-1.5 translate-y-3 dark:text-white">
+						<p className="text-2xl asd  md:text-4xl  text-black transition duration-500 translate-x-1.5 translate-y-3 dark:text-white">
 							Hello! I am
 						</p>
 						<span className="text-transparent font-bold mb-2 transition-all duration-1000 text-7xl md:text-8xl bg-gradient-to-r from-[#191654] to-[#43c6ac] dark:from-[#7069f4] dark:to-[#abedf3] bg-clip-text ">
