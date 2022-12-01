@@ -35,6 +35,7 @@ export default function DarkMode() {
 		<AnimatePresence exitBeforeEnter initial={false}>
 			<div className="relative">
 				<motion.button
+					aria-label="theme toggle"
 					className="z-20 text-2xl text-yellow-500 focus:outline-none "
 					onClick={() => {
 						toggleMode();

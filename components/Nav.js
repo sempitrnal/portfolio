@@ -37,7 +37,7 @@ export default function Nav() {
 		return () => window.removeEventListener("resize", hello);
 	});
 	return (
-		<nav className="z-50  sticky top-0 transition duration-500 px-[2rem] md:px-[5rem] lg:px-[10rem] xl:px-[15rem] 2xl:px-[20rem]  bg-white py-7 border-b border-[#e9e9e9] flex items-center justify-between dark:bg-[#111] dark:border-[#1f2020]">
+		<nav className="z-50 sticky top-0 transition duration-500 px-[2rem] md:px-[5rem] lg:px-[10rem] xl:px-[15rem] 2xl:px-[20rem]  bg-white py-7 border-b border-[#e9e9e9] flex items-center justify-between dark:bg-[#111] dark:border-[#1f2020]">
 			<Link href={"/"}>
 				<p className="text-xl font-semibold text-[#3c3c3c] transition duration-500 cursor-pointer dark:text-white sm:block">
 					Reynald Sampelo

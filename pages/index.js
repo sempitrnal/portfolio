@@ -77,8 +77,17 @@ export default function Home() {
 				className=""
 			>
 				<div className="flex flex-col items-center justify-between gap-10 lg:items-end lg:flex-row">
-					<div className="relative lg:hidden w-[20rem] h-[20rem]">
-						<Image src={"/bo.png"} layout="fill" objectFit="contain" alt="" />
+					<div className="relative lg:hidden w-[15rem] h-[15rem] overflow-hidden rounded-full   lg:w-[22rem] lg:h-[22rem]">
+						<Image
+							src={"/bo.png"}
+							layout="fill"
+							objectFit="contain"
+							alt=""
+							className={`ease-in-out duration-[.6s] ${
+								isLoading ? "opacity-0 blur-md" : "opacity-100 blur-0"
+							}`}
+							onLoadingComplete={() => setLoading(false)}
+						/>
 					</div>
 					<div className="flex flex-col items-center text-center lg:items-start lg:text-start">
 						<motion.h2 className="mb-5 text-6xl font-semibold text-black transition duration-500 dark:text-white">
