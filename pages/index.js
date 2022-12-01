@@ -93,16 +93,16 @@ export default function Home() {
 						<div className="relative lg:hidden">
 							<motion.div className="absolute z-[9999] top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
 								<ClipLoader
-									cssOverride={{ borderWidth: "6.9px" }}
+									cssOverride={{ borderWidth: "3px" }}
 									loading={isLoading}
 									color="#52594A"
 									size={80}
 								></ClipLoader>
 							</motion.div>
 							<div
-								className={`relative lg:hidden w-[15rem] h-[15rem] overflow-hidden rounded-full   lg:w-[22rem] lg:h-[22rem] ease-in-out duration-[.6s] ${
+								className={`relative lg:hidden w-[15rem] h-[15rem] overflow-hidden rounded-full   lg:w-[22rem] lg:h-[22rem] ease-in-out duration-[1s] ${
 									isLoading
-										? "blur-2xl scale-110 opacity-70 "
+										? "blur-md scale-110 opacity-70 "
 										: "blur-0 opacity-100 scale-100"
 								}`}
 							>
@@ -146,16 +146,16 @@ export default function Home() {
 						<div className="relative">
 							<motion.div className="absolute z-[9999] top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
 								<ClipLoader
-									cssOverride={{ borderWidth: "6.9px" }}
+									cssOverride={{ borderWidth: "3px" }}
 									loading={isLoading}
 									color="#52594A"
 									size={80}
 								></ClipLoader>
 							</motion.div>
 							<div
-								className={`hidden w-[15rem] h-[15rem] overflow-hidden rounded-full  lg:block relative lg:w-[22rem] lg:h-[22rem] ease-in-out duration-[.6s] ${
+								className={`hidden w-[15rem] h-[15rem] overflow-hidden rounded-full  lg:block relative lg:w-[22rem] lg:h-[22rem] ease-in-out duration-[1s] ${
 									isLoading
-										? "blur-2xl scale-110 opacity-70 "
+										? "blur-md scale-110 opacity-70 "
 										: "blur-0 opacity-100 scale-100"
 								}`}
 							>
