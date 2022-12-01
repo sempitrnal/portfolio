@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps, router }) {
 		<div className="w-full">
 			<Nav />
 			<AnimatePresence
-				mode="wait"
+				exitBeforeEnter
 				initial={false}
 				onExitComplete={() => window.scrollTo(0, 0)}
 			>
