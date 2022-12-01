@@ -4,10 +4,8 @@ import React, { useState } from "react";
 const StackCard = ({ e }) => {
 	const [isLoading, setIsLoading] = useState(true);
 	return (
-		<div className="relative flex items-center justify-center p-5 bg-white rounded-lg shadow-md md:p-5 dark:shadow-none">
-			<div
-				className={`h-[3rem] w-[4.8rem] md:h-[4rem] md:w-[5rem] 2xl:w-[10rem] relative rounded-lg overflow-hidden`}
-			>
+		<div className="relative flex items-center justify-center px-5 py-2 bg-white rounded-lg shadow-md dark:shadow-none">
+			<div className={`h-[3rem] w-[5rem] relative rounded-lg overflow-hidden`}>
 				<Image
 					className={`ease-in-out duration-[1s] ${
 						isLoading ? "opacity-0" : "opacity-100"
