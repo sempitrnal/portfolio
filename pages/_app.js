@@ -10,10 +10,10 @@ import Footer from "../components/Footer";
 function MyApp({ Component, pageProps, router }) {
 	const [setTheme, colorTheme] = useDarkMode();
 	return (
-		<div className="overflow-x-hidden">
+		<div className="w-full">
 			<Nav />
 			<AnimatePresence
-				exitBeforeEnter
+				mode="wait"
 				initial={false}
 				onExitComplete={() => window.scrollTo(0, 0)}
 			>
