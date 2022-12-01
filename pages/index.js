@@ -90,22 +90,33 @@ export default function Home() {
 					className=""
 				>
 					<div className="flex flex-col items-center justify-between gap-10 lg:items-end lg:flex-row">
-						<div
-							className={`relative lg:hidden w-[15rem] h-[15rem] overflow-hidden rounded-full   lg:w-[22rem] lg:h-[22rem] ease-in-out duration-[.6s] ${
-								isLoading
-									? "blur-2xl scale-110 opacity-70 "
-									: "blur-0 opacity-100 scale-100"
-							}`}
-						>
-							<Image
-								src={"/bo.webp"}
-								layout="fill"
-								objectFit="contain"
-								alt=""
-								className={``}
-								onLoadingComplete={() => setLoading(false)}
-							/>
+						<div className="relative lg:hidden">
+							<motion.div className="absolute z-[9999] top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
+								<ClipLoader
+									cssOverride={{ borderWidth: "6.9px" }}
+									loading={isLoading}
+									color="#52594A"
+									size={80}
+								></ClipLoader>
+							</motion.div>
+							<div
+								className={`relative lg:hidden w-[15rem] h-[15rem] overflow-hidden rounded-full   lg:w-[22rem] lg:h-[22rem] ease-in-out duration-[.6s] ${
+									isLoading
+										? "blur-2xl scale-110 opacity-70 "
+										: "blur-0 opacity-100 scale-100"
+								}`}
+							>
+								<Image
+									src={"/bo.webp"}
+									layout="fill"
+									objectFit="contain"
+									alt=""
+									className={``}
+									onLoadingComplete={() => setLoading(false)}
+								/>
+							</div>
 						</div>
+
 						<div className="flex flex-col items-center text-center lg:items-start lg:text-start">
 							<motion.h2 className="mb-5 text-6xl font-semibold text-black transition duration-500 dark:text-white">
 								Hello, I'm{" "}
@@ -132,21 +143,31 @@ export default function Home() {
 								</div>
 							</a>
 						</div>
-						<div
-							className={`hidden w-[15rem] h-[15rem] overflow-hidden rounded-full  lg:block relative lg:w-[22rem] lg:h-[22rem] ease-in-out duration-[.6s] ${
-								isLoading
-									? "blur-2xl scale-110 opacity-70 "
-									: "blur-0 opacity-100 scale-100"
-							}`}
-						>
-							<Image
-								src={"/bo.webp"}
-								layout="fill"
-								objectFit="contain"
-								alt=""
-								className={``}
-								onLoadingComplete={() => setLoading(false)}
-							/>
+						<div className="relative">
+							<motion.div className="absolute z-[9999] top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
+								<ClipLoader
+									cssOverride={{ borderWidth: "6.9px" }}
+									loading={isLoading}
+									color="#52594A"
+									size={80}
+								></ClipLoader>
+							</motion.div>
+							<div
+								className={`hidden w-[15rem] h-[15rem] overflow-hidden rounded-full  lg:block relative lg:w-[22rem] lg:h-[22rem] ease-in-out duration-[.6s] ${
+									isLoading
+										? "blur-2xl scale-110 opacity-70 "
+										: "blur-0 opacity-100 scale-100"
+								}`}
+							>
+								<Image
+									src={"/bo.webp"}
+									layout="fill"
+									objectFit="contain"
+									alt=""
+									className={``}
+									onLoadingComplete={() => setLoading(false)}
+								/>
+							</div>
 						</div>
 					</div>
 					{/* <div className="flex gap-1 text-xl font-semibold">
