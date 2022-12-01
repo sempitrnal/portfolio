@@ -91,7 +91,7 @@ export default function Home() {
 				>
 					<div className="flex flex-col items-center justify-between gap-10 lg:items-end lg:flex-row">
 						<div className="relative lg:hidden w-[15rem] h-[15rem] lg:w-[22rem] lg:h-[22rem]">
-							<motion.div className="absolute z-[9999] top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
+							<motion.div className="absolute  top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
 								<ClipLoader
 									cssOverride={{ borderWidth: "3px" }}
 									loading={isLoading}
@@ -100,7 +100,7 @@ export default function Home() {
 								></ClipLoader>
 							</motion.div>
 							<div
-								className={`relative lg:hidden w-[15rem] h-[15rem] overflow-hidden rounded-full   lg:w-[22rem] lg:h-[22rem] ease-in-out duration-[1s] ${
+								className={`relative lg:hidden w-[15rem] h-[15rem] overflow-hidden rounded-full   lg:w-[22rem] lg:h-[22rem] ease-in-out duration-[.5s] ${
 									isLoading
 										? "blur-md scale-110 opacity-70 "
 										: "blur-0 opacity-100 scale-100"
@@ -118,13 +118,13 @@ export default function Home() {
 						</div>
 
 						<div className="flex flex-col items-center text-center lg:items-start lg:text-start">
-							<motion.h2 className="mb-5 text-6xl font-semibold text-black transition duration-500 dark:text-white">
+							<h2 className="mb-5 text-6xl font-semibold text-black transition duration-500 dark:text-white">
 								Hello, I'm{" "}
 								<span className="text-transparent transition-all duration-1000 delay-1000 bg-gradient-to-r from-[#191654] to-[#43c6ac] dark:from-[#7069f4] dark:to-[#abedf3] bg-clip-text">
 									Reynald
 								</span>{" "}
 								👋🏽
-							</motion.h2>
+							</h2>
 
 							<motion.h2 className="text-2xl duration-500  text-[#000000a7] dark:text-[#b0b0b0]  mb-5">
 								Cebu Institute of Technology - University
@@ -144,7 +144,7 @@ export default function Home() {
 							</a>
 						</div>
 						<div className=" w-[15rem] h-[15rem]  lg:block relative lg:w-[22rem] lg:h-[22rem]">
-							<motion.div className="absolute z-[9999] top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
+							<motion.div className="absolute  top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
 								<ClipLoader
 									cssOverride={{ borderWidth: "3px" }}
 									loading={isLoading}
