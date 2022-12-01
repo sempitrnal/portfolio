@@ -15,7 +15,7 @@
 		@apply px-[1.8rem] md:px-[4.8rem] lg:px-[9.8rem] xl:px-[14.8rem] 2xl:px-[20rem] py-[7rem];
 	}
 	.paragraph {
-		@apply w-full duration-500 text-justify xl:text-start text-xl xl:w-[75%] leading-8  text-[#0008] dark:text-[#a1a1a1] mb-5;
+		@apply w-full duration-500 text-justify xl:text-start text-xl xl:w-[75%] leading-8  text-[#4b4b4b] dark:text-[#a1a1a1] mb-5;
 	}
 	.header2 {
 		@apply mt-20 mb-5 text-3xl font-semibold duration-500 dark:text-[#bdbdbd] text-[#3c3c3c];

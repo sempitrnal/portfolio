@@ -10,7 +10,7 @@ import Footer from "../components/Footer";
 function MyApp({ Component, pageProps, router }) {
 	const [setTheme, colorTheme] = useDarkMode();
 	return (
-		<>
+		<div className="overflow-x-hidden">
 			<Nav />
 			<AnimatePresence
 				exitBeforeEnter
@@ -22,7 +22,7 @@ function MyApp({ Component, pageProps, router }) {
 			<AnimatePresence>
 				<Footer key={router.route} />
 			</AnimatePresence>
-		</>
+		</div>
 	);
 }
 

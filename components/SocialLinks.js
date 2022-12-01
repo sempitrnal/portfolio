@@ -30,6 +30,7 @@ export default function SocialLinks() {
 			{socials.map((e) => {
 				return (
 					<a
+						aria-label={e.name}
 						target="_blank"
 						key={e.name}
 						href={e.link}
