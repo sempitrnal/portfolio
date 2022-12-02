@@ -10,7 +10,7 @@ import Footer from "../components/Footer";
 function MyApp({ Component, pageProps, router }) {
 	const [setTheme, colorTheme] = useDarkMode();
 	return (
-		<div className="w-full">
+		<div className="w-full overflow-x-hidden">
 			<Nav />
 			<AnimatePresence
 				exitBeforeEnter
