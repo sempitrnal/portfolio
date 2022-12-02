@@ -90,8 +90,8 @@ export default function Home({ setHide, hide }) {
 				variants={slideDown}
 				className=""
 			>
-				<div className="flex flex-col items-center justify-between gap-10 lg:items-end lg:flex-row">
-					{/* <div className="relative lg:hidden w-[15rem] h-[15rem] lg:w-[22rem] lg:h-[22rem]">
+				{" "}
+				{/* <div className="relative lg:hidden w-[15rem] h-[15rem] lg:w-[22rem] lg:h-[22rem]">
 						<motion.div className="absolute  top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
 							<ClipLoader
 								cssOverride={{ borderWidth: "3px" }}
@@ -117,25 +117,41 @@ export default function Home({ setHide, hide }) {
 							/>
 						</div>
 					</div> */}
-
-					<div className="flex flex-col items-start min-h-[60vh] mb-[10rem] justify-center lg:items-start lg:text-start">
-						<p className="text-2xl asd  md:text-4xl  text-black transition after:translate-x-1.5 translate-y-3 dark:text-white">
-							Hello! I am
-						</p>
-						<span className="text-transparent font-bold mb-2 transition text-7xl md:text-8xl bg-gradient-to-r from-[#191654] to-[#43c6ac] dark:from-[#7069f4] dark:to-[#abedf3] bg-clip-text ">
-							Reynald Sampelo
-						</span>{" "}
-						<motion.h2 className="text-3xl font-semibold md:text-5xl  text-[#0000008d] dark:text-[#ebebeb]  ">
+				<div className="flex md:justify-start min-h-[60vh] w-full items-center h-full  mb-[20rem]">
+					<div className="flex flex-col items-center md:items-start">
+						<div className="relative mb-3 text-center md:mb-0">
+							<p className="text-3xl absolute top-[-.5rem] left-[.1rem] asd  md:text-4xl  text-black transition after:translate-x-1.5 translate-y-3 dark:text-white">
+								Hello! I am
+							</p>
+							<span className="py-1 font-bold transition text-[6.5rem] colorful_text ">
+								Reynald Sampelo
+							</span>
+						</div>
+						<motion.h2 className="text-4xl font-semibold  bg-gradient-to-r -translate-y-4 from-[#99cc5f] to-[#4557e0] dark:from-[#fcff50] dark:to-[#87fff7] dark:opacity-60 opacity-40 w-max bg-clip-text text-transparent py-1 md:text-5xl">
 							Frontend Engineer
 						</motion.h2>
-						<p className="my-10 text-xl text-[#868686]">
-							I like to build stuff
-						</p>
+						<div className="flex items-end gap-1.5 my-7  -translate-y-2 ">
+							<p className="text-xl text-[#909090]">
+								I like to build stuff with
+							</p>
+							<div className=" text-xl text-[#909090] font-semibold">
+								<Typewriter
+									options={{
+										strings: ["PHP", "Java", "JavaScript", "Python"],
+										autoStart: true,
+										loop: true,
+										pauseFor: 1000,
+										deleteSpeed: 50,
+									}}
+								/>
+							</div>
+						</div>
 						<div className="">
 							<SocialLinks />
 						</div>
 					</div>
-					{/* <div className="hidden w-[15rem] h-[15rem]  lg:block relative lg:w-[22rem] lg:h-[22rem]">
+				</div>
+				{/* <div className="hidden w-[15rem] h-[15rem]  lg:block relative lg:w-[22rem] lg:h-[22rem]">
 						<motion.div className="absolute  top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
 							<ClipLoader
 								cssOverride={{ borderWidth: "3px" }}
@@ -161,7 +177,6 @@ export default function Home({ setHide, hide }) {
 							/>
 						</div>
 					</div> */}
-				</div>
 				{/* <div className="flex gap-1 text-xl font-semibold">
 					<Typewriter
 						options={{
@@ -174,7 +189,6 @@ export default function Home({ setHide, hide }) {
 					/>
 				</div> */}
 				<h2 className="header2">About</h2>
-
 				<div className="flex flex-col items-center justify-between gap-20 xl:items-start xl:flex-row">
 					<div className="flex flex-col xl:w-[60%]">
 						<motion.p className="paragraph">
@@ -248,7 +262,6 @@ export default function Home({ setHide, hide }) {
 						</div>
 					</div>
 				</div>
-
 				<h2 className="header2">Stack</h2>
 				<div className="grid w-full grid-cols-3 gap-6 my-10 mb-24 md:flex md:flex-wrap">
 					{tech_stack.map((e) => {
