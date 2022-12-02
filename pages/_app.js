@@ -12,6 +12,7 @@ function MyApp({ Component, pageProps, router }) {
 	useDarkMode();
 	return (
 
+
 		<div className="w-full overflow-x-hidden">
 			<Nav hideNav={hideNav} setHide={setHide}  />
 
