@@ -67,9 +67,9 @@ export default function Nav({ setHide, hideNav }) {
 	});
 	return (
 		<nav
-			className={`z-[150] fixed left-0 ${
+			className={`${
 				hideNav ? "-translate-y-[80px]" : ""
-			} right-0  transition-all duration-500 px-[2rem] md:backdrop-blur-lg  md:bg-white/50 py-7 flex items-center justify-between dark:bg-[#111111] md:dark:bg-[#111111dc] bg-white dark:shadow-[0px_0px_10px_#ffffff20] dark:border-[#1f2020]`}
+			} navigation__bar dark:shadow-[0px_0px_10px_#ffffff20]`}
 		>
 			<Link href={"/"}>
 				<p className="text-xl font-semibold text-[#3c3c3c] transition duration-500 cursor-pointer dark:text-white sm:block">
