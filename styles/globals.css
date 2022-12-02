@@ -31,6 +31,9 @@
 	font-display: swap;
 }
 @layer components {
+	.colorful_text {
+		@apply bg-gradient-to-r  from-[#191654] to-[#43c6ac] dark:from-[#7069f4] dark:to-[#abedf3] bg-clip-text text-transparent;
+	}
 	.page {
 		@apply min-h-screen;
 		@apply transition-[padding] duration-100;
