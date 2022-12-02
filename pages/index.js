@@ -117,20 +117,14 @@ export default function Home({ setHide, hide }) {
 							/>
 						</div>
 					</div> */}
-				<div className="flex md:justify-start min-h-[60vh] w-full items-center h-full  mb-[20rem]">
+				<div className="hero">
 					<div className="flex flex-col items-center md:items-start">
-						<div className="relative mb-3 text-center md:mb-0">
-							<p className="text-3xl absolute top-[-.5rem] left-[.1rem] asd  md:text-4xl  text-black transition after:translate-x-1.5 translate-y-3 dark:text-white">
-								Hello! I am
-							</p>
-							<span className="py-1 font-bold transition text-[6.5rem] colorful_text ">
-								Reynald Sampelo
-							</span>
+						<div className="relative flex mb-3 text-center md:text-start md:mb-0">
+							<p className="hello">Hello! I am</p>
+							<span className=" rs colorful_text">Reynald Sampelo</span>
 						</div>
-						<motion.h2 className="text-4xl font-semibold  bg-gradient-to-r -translate-y-4 from-[#99cc5f] to-[#4557e0] dark:from-[#fcff50] dark:to-[#87fff7] dark:opacity-60 opacity-40 w-max bg-clip-text text-transparent py-1 md:text-5xl">
-							Frontend Engineer
-						</motion.h2>
-						<div className="flex items-end gap-1.5 my-7  -translate-y-2 ">
+						<motion.h2 className="fe ">Frontend Engineer</motion.h2>
+						<div className="flex flex-col xs:flex-row items-center xs:items-end gap-1.5 my-7  -translate-y-2 ">
 							<p className="text-xl text-[#909090]">
 								I like to build stuff with
 							</p>
@@ -188,38 +182,30 @@ export default function Home({ setHide, hide }) {
 						}}
 					/>
 				</div> */}
-				<h2 className="header2">About</h2>
-				<div className="flex flex-col items-center justify-between gap-20 xl:items-start xl:flex-row">
+				<h2 className="header2 xl:px-[5rem]">About</h2>
+				<div className="flex flex-col xl:px-[5rem] items-center justify-center gap-20 xl:items-start xl:flex-row">
 					<div className="flex flex-col xl:w-[60%]">
 						<motion.p className="paragraph">
-							My name is Reynald Sampelo and I am an Information Technology
-							student who is passionate and has innate curiosity about{" "}
-							<span className="highlight "> Software Development. </span>I
-							aspire to be a full-stack developer who can adapt quickly and
-							easily grasp emerging technologies.
+							I am an Information Technology student who is passionate and has
+							innate curiosity about{" "}
+							<span className="highlight">Software Development.</span> My
+							aspiration is to become a full-stack developer; one that can
+							easily adapt and grasp emerging concepts in the ever-changing
+							world of technology.
 						</motion.p>
 						<p className="paragraph">
-							I am interested in learning more about Web and Mobile Application
-							Development. I am comfortable on working with{" "}
-							<span className=" highlight">ReactJS</span> and{" "}
-							<span className=" highlight">NextJS</span> on my projects. I am
-							also yet to learn about <span className="highlight">BaaS</span>{" "}
-							such as <span className=" highlight">Firebase </span> &{" "}
-							<span className="highlight">Supabase</span> to integrate on my
-							projects. I also ought to start learning{" "}
-							<span className="highlight">React Native </span> as my main Mobile
-							App Tech Stack.
+							My interests include Web and Mobile Application Development. I am
+							comfortable on working with ReactJS/NextJS with Firebase/Supabase
+							as my backend for small scale applications. I'm still learning
+							React Native, MongoDB, Node.js, and ExpressJS in order to
+							incorporate them into my future projects.
 						</p>
-						<p className="paragraph">
-							Other than coding, I spend my time to practice{" "}
-							<span className="font-semibold">Yaw-Yan</span> (a Filipino martial
-							art), <span className="font-semibold">Surfskating</span>,{" "}
-							<span className="font-semibold">Freediving</span>,{" "}
-							<span className="font-semibold">Photography</span>,{" "}
-							<span className="font-semibold">Videography</span>, and playing{" "}
-							<span className="font-semibold">musical instruments</span> in my
+						{/* <p className="paragraph">
+							Other than coding, I enjoy spending my time practicing “Yaw-Yan” —
+							a Filipino martial art. I also enjoy surfskating, freediving,
+							photography, videography, and playing musical instruments in my
 							free time.
-						</p>
+						</p> */}
 					</div>
 					<div className="relative group ">
 						<div className="absolute items-center flex gap-1 font-['Nanum_Pen_Script'] text-lg rotate-[14deg] right-[-20px] md:right-[-50px] top-[-3rem] z-50">
@@ -256,18 +242,17 @@ export default function Home({ setHide, hide }) {
 								onLoadingComplete={() => setLoading(false)}
 							/>{" "}
 							<div className="hidden w-full h-full duration-500 dark:block -z-10 asdd group-hover:translate-x-5 group-hover:translate-y-5 before:border-[3px]  before:border-white  before:border-solid"></div>
-							<div className="absolute top-0 hidden w-full h-full duration-500 delay-50 dark:block -z-10 asdd group-hover:translate-x-10 group-hover:translate-y-10  before:border-[3px]  before:border-solid  before:border-[#ffffff46]"></div>
-							<div className="absolute top-0 hidden w-full h-full duration-500 delay-50 dark:block -z-10 asdd group-hover:translate-x-[3.75rem] group-hover:translate-y-[3.75rem]  before:border-[3px]  before:border-solid  before:border-[#ffffff13]"></div>
-							<div className="absolute top-0 hidden w-full h-full duration-500 delay-50 dark:block -z-10 asdd group-hover:translate-x-[5rem] group-hover:translate-y-[5rem]  before:border-[3px]  before:border-solid  before:border-[#ffffff05]"></div>
+							<div className="absolute top-0 hidden w-full h-full duration-500 delay-100 dark:block -z-10 asdd group-hover:translate-x-10 group-hover:translate-y-10  before:border-[3px]  before:border-solid  before:border-[#ffffff46]"></div>
+							<div className="absolute top-0 hidden w-full h-full duration-500 delay-150 dark:block -z-10 asdd group-hover:translate-x-[3.75rem] group-hover:translate-y-[3.75rem]  before:border-[3px]  before:border-solid  before:border-[#ffffff13]"></div>
+							<div className="absolute top-0 hidden w-full h-full duration-500 delay-300 dark:block -z-10 asdd group-hover:translate-x-[5rem] group-hover:translate-y-[5rem]  before:border-[3px]  before:border-solid  before:border-[#ffffff05]"></div>
 						</div>
 					</div>
 				</div>
-				<h2 className="header2">Stack</h2>
-				<div className="grid w-full grid-cols-3 gap-6 my-10 mb-24 md:flex md:flex-wrap">
+				{/* <div className="grid w-full grid-cols-3 gap-6 my-10 mb-24 md:flex md:flex-wrap">
 					{tech_stack.map((e) => {
 						return <StackCard key={e.name} e={e} />;
 					})}
-				</div>
+				</div> */}
 				<div className="flex flex-col items-center justify-center  mt-[12rem] mb-[5rem] ">
 					<p className="text-[4.5rem] text-[#292929] dark:text-white">
 						next up
@@ -280,7 +265,7 @@ export default function Home({ setHide, hide }) {
 						}}
 						whileHover={{ x: 10 }}
 						transition={{ duration: 0.2 }}
-						className="flex gap-2 items-center text-[3rem] font-thin cursor-pointer"
+						className="flex gap-2 items-center text-[3rem] font-thin font-sans cursor-pointer"
 					>
 						Projects -{">"}
 					</motion.p>

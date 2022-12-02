@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 @import "@fontsource/nanum-pen-script";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap");
 .asd {
 	font-family: "Nanum Pen Script", cursive;
 }
@@ -17,7 +18,12 @@
 
 	border-radius: 4px;
 }
-
+.rs {
+	font-size: clamp(5rem, 8vw, 8vw);
+}
+.fe {
+	font-size: clamp(2rem, 3.5vw, 5rem);
+}
 @layer base {
 	body {
 		@apply dark:bg-[#111111] transition duration-500;
@@ -31,21 +37,33 @@
 	font-display: swap;
 }
 @layer components {
+	.hero {
+		@apply flex justify-center md:justify-start min-h-[60vh] w-full items-center h-full mb-[15rem]  md:mb-[20rem];
+	}
+	.rs {
+		@apply py-1 font-bold transition leading-[5rem] md:leading-[8rem];
+	}
+	.fe {
+		@apply font-semibold  bg-gradient-to-r  from-[#99cc5f] to-[#4557e0] dark:from-[#fcff50] dark:to-[#87fff7] -translate-y-2    dark:opacity-60 opacity-40 w-max bg-clip-text text-transparent py-1;
+	}
+	.hello {
+		@apply text-3xl absolute left-[50%] -translate-x-[50%] md:left-[3.5rem] asd top-[-1.5rem] text-black transition after:translate-x-1.5 translate-y-3 dark:text-white;
+	}
 	.colorful_text {
 		@apply bg-gradient-to-r  from-[#191654] to-[#43c6ac] dark:from-[#7069f4] dark:to-[#abedf3] bg-clip-text text-transparent;
 	}
 	.page {
 		@apply min-h-screen;
 		@apply transition-[padding] duration-100;
-		@apply px-[1.8rem] md:px-[4.8rem] lg:px-[9.8rem] xl:px-[14.8rem] 2xl:px-[20rem] pb-[10rem] pt-[10rem] md:pt-[12rem];
+		@apply px-[1.8rem] md:px-[4.8rem] lg:px-[9.8rem] xl:px-[10.8rem] 2xl:px-[20rem] pb-[10rem] pt-[10rem] md:pt-[12rem];
 	}
 	.paragraph {
-		@apply w-full duration-500 text-justify xl:text-start text-lg leading-8  text-[#7b7b7b] dark:text-[#a1a1a1] mb-5;
+		@apply w-full duration-500 tracking-[.02rem] text-justify xl:text-start text-lg  font-[300]  text-[#7b7b7b] dark:text-[#a1a1a1] mb-5;
 	}
 	.header2 {
 		@apply mt-20 mb-10 text-[2rem] font-semibold duration-500 dark:text-[#e2e2e2] text-[#2a2a2a];
 	}
 	.highlight {
-		@apply font-bold text-black duration-500 dark:text-white;
+		@apply font-medium text-[#4e4e4e] duration-500 dark:text-[#e1e08f];
 	}
 }
