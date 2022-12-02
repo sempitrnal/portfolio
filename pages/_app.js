@@ -11,8 +11,10 @@ function MyApp({ Component, pageProps, router }) {
 	const [hideNav, setHide] = useState(false);
 	useDarkMode();
 	return (
-		<div className="w-full">
-			<Nav hideNav={hideNav} setHide={setHide} />
+
+		<div className="w-full overflow-x-hidden">
+			<Nav hideNav={hideNav} setHide={setHide}  />
+
 			<AnimatePresence
 				exitBeforeEnter
 				initial={false}
