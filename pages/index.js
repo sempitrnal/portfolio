@@ -208,7 +208,7 @@ export default function Home({ setHide, hide }) {
 						</p>
 					</div>
 					<div className="relative group ">
-						<div className="absolute items-center flex gap-1 font-['Nanum_Pen_Script'] text-lg rotate-[14deg] right-[-50px] top-[-3rem] z-50">
+						<div className="absolute items-center flex gap-1 font-['Nanum_Pen_Script'] text-lg rotate-[14deg] right-[-20px] md:right-[-50px] top-[-3rem] z-50">
 							hover me in{" "}
 							{
 								<div className="text-sm -translate-y-0.5 ml-0.5">
