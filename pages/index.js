@@ -227,7 +227,7 @@ export default function Home({ setHide, hide }) {
 						</motion.div>
 
 						<div
-							className={`relative group-hover:-translate-y-0.5 group-hover:-translate-x-0.5  dark:group-hover:-translate-x-5 dark:group-hover:-translate-y-5  saturate-0 group-hover:saturate-100   group-hover:shadow-[5px_5px_10px_#00000038]   outline-4 rounded-md    w-[22rem] h-[24rem] ease-in-out duration-[.4s] ${
+							className={`relative group-hover:-translate-y-0.5 group-hover:-translate-x-0.5  dark:group-hover:-translate-x-5 dark:group-hover:-translate-y-5  saturate-0 group-hover:saturate-100   group-hover:shadow-[5px_5px_10px_#00000038]   outline-4 rounded-md w-[18rem] h-[20rem]    md:w-[22rem] md:h-[24rem] ease-in-out duration-[.4s] ${
 								isLoading
 									? "blur-md scale-110 opacity-70 "
 									: "blur-0 opacity-100 scale-100"
