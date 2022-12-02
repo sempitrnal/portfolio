@@ -7,7 +7,7 @@ import { HiMenu } from "react-icons/hi";
 import { MdClose } from "react-icons/md";
 import Image from "next/image";
 
-export default function Nav() {
+export default function Nav({ setHide, hideNav }) {
 	const nav = [
 		{ label: "Home", path: "/" },
 		// { label: "Experience", path: "/experience" },
@@ -28,7 +28,7 @@ export default function Nav() {
 	const [navOpen, setNavOpen] = useState(false);
 	const [innerWidth, setInnerWidth] = useState();
 	const [scrollY, setScrollY] = useState();
-	const [hideNav, setHide] = useState();
+
 	// eslint-disable-next-line react-hooks/exhaustive-deps
 	useEffect(() => {
 		setInnerWidth(window.innerWidth);
@@ -110,7 +110,7 @@ export default function Nav() {
 									{router.route === e.path && (
 										<motion.div
 											layoutId={"bg"}
-											className="hidden md:block w-full h-full absolute top-0 rounded-md bg-gradient-to-r from-[#7243a4]  to-[#060606] dark:from-slate-300 dark:to-slate-100 z-[-5] "
+											className="hidden md:block w-full h-full absolute top-0 rounded-md bg-gradient-to-r from-[#3da087]  to-[#29af89] dark:from-slate-300 dark:to-slate-100 z-[-5] "
 										></motion.div>
 									)}
 								</motion.div>
