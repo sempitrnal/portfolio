@@ -43,6 +43,9 @@ export default function Nav({ setHide, hideNav }) {
 		}
 		const asd = () => {
 			if (window.scrollY > 1) {
+				document
+					.querySelector("nav")
+					.classList.add("dark:shadow-[0px_0px_10px_#ffffff20]");
 				document.querySelector("nav").classList.add("shadow-lg");
 				document.querySelector("nav").classList.remove("py-7");
 				document.querySelector("nav").classList.add("py-5");
@@ -66,11 +69,7 @@ export default function Nav({ setHide, hideNav }) {
 		return () => window.removeEventListener("resize", hello);
 	});
 	return (
-		<nav
-			className={`${
-				hideNav ? "-translate-y-[80px]" : ""
-			} navigation__bar dark:shadow-[0px_0px_10px_#ffffff20]`}
-		>
+		<nav className={`${hideNav ? "-translate-y-[80px]" : ""} navigation__bar `}>
 			<Link href={"/"}>
 				<p className="text-xl font-semibold text-[#3c3c3c] transition duration-500 cursor-pointer dark:text-white sm:block">
 					<Image
@@ -85,9 +84,9 @@ export default function Nav({ setHide, hideNav }) {
 
 			<div className="flex">
 				<div
-					className={`fixed overflow-hidden md:overflow-visible transition-[bottom] duration-700 left-0 right-0 flex flex-col items-center bg-white shadow-lg md:bg-transparent  md:gap-1 md:flex-row top-[-15px] mt-20 md:static leading-[5rem] md:leading-none md:shadow-none md:mt-0  ${
+					className={`mobile__nav ${
 						navOpen ? "bottom-[0%]" : "bottom-[100%]"
-					} dark:bg-[#111111] marker:md:bg-transparent md:dark:bg-transparent`}
+					} `}
 				>
 					{nav.map((e, i) => {
 						return (
@@ -110,7 +109,7 @@ export default function Nav({ setHide, hideNav }) {
 									{router.route === e.path && (
 										<motion.div
 											layoutId={"bg"}
-											className="hidden md:block w-full h-full absolute top-0 rounded-md bg-gradient-to-r from-[#3da087]  to-[#29af89] dark:from-slate-300 dark:to-slate-100 z-[-5] "
+											className="hidden md:block w-full h-full absolute top-0 rounded-md bg-gradient-to-r from-[#150a3e]  to-[#08062b] dark:from-slate-300 dark:to-slate-100 z-[-5] "
 										></motion.div>
 									)}
 								</motion.div>
@@ -119,7 +118,7 @@ export default function Nav({ setHide, hideNav }) {
 					})}
 					<a
 						onClick={() => setNavOpen(false)}
-						className={`flex items-center justify-start gap-3 px-4 py-2 mx-3 transition-all duration-500 ease-in-out rounded-md  dark:text-white w-max ${
+						className={`resume ${
 							innerWidth > 767
 								? "shadow-[0px_0px_0px_1px_#2e2e2e] hover:shadow-[0px_0px_0px_1.5px_#2e2e2e]  dark:shadow-[0px_0px_0px_1px_#d0d0d0] dark:hover:shadow-[0px_0px_0px_1.5px_#d0d0d0]"
 								: ""

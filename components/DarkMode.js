@@ -47,7 +47,7 @@ export default function DarkMode() {
 					transition={{ duration: 0.5 }}
 				>
 					{darkModeActive ? (
-						<div className="">
+						<div className="transition-colors duration-300 hover:text-yellow-600">
 							<HiSun />
 						</div>
 					) : (

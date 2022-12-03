@@ -241,7 +241,7 @@ export default function Home({ setHide, hide }) {
 								className={`rounded-[4px] z-50`}
 								onLoadingComplete={() => setLoading(false)}
 							/>{" "}
-							<div className="hidden w-full h-full duration-500 dark:block -z-10 asdd group-hover:translate-x-5 group-hover:translate-y-5 before:border-[3px]  before:border-white  before:border-solid"></div>
+							<div className="hidden w-full h-full duration-500 dark:block -z-10 asdd group-hover:translate-x-5 group-hover:translate-y-5 before:border-[3px] group-hover:opacity-50  before:border-white  before:border-solid"></div>
 							<div className="absolute top-0 hidden w-full h-full duration-500 delay-100 dark:block -z-10 asdd group-hover:translate-x-10 group-hover:translate-y-10  before:border-[3px]  before:border-solid  before:border-[#ffffff46]"></div>
 							<div className="absolute top-0 hidden w-full h-full duration-500 delay-150 dark:block -z-10 asdd group-hover:translate-x-[3.75rem] group-hover:translate-y-[3.75rem]  before:border-[3px]  before:border-solid  before:border-[#ffffff13]"></div>
 							<div className="absolute top-0 hidden w-full h-full duration-500 delay-300 dark:block -z-10 asdd group-hover:translate-x-[5rem] group-hover:translate-y-[5rem]  before:border-[3px]  before:border-solid  before:border-[#ffffff05]"></div>
