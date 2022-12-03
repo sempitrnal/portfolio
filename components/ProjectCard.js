@@ -26,18 +26,18 @@ const ProjectCard = ({ e }) => {
 		return e !== "Firebase" && e !== "Vite" ? "white" : "";
 	};
 	return (
-		<div className="px-10 py-16 bg-white rounded-lg shadow-md">
+		<div className="px-10 py-16 dark:text-white">
 			<h1 className="mb-3 text-3xl">{e.name}</h1>
-			<div className="flex flex-wrap gap-3">
+			<div className="flex flex-wrap gap-3 font-mono ">
 				{e.stack.map((e) => (
 					<p
-						className={`px-3 py-1 text-sm font-semibold rounded-lg ${
-							e === "NextJS" ? "" : "shadow-md"
-						}`}
-						style={{
-							backgroundColor: bg(e),
-							color: color(e),
-						}}
+						className={`px-2 py-0.5 text-xs   rounded-sm `}
+						style={
+							{
+								// backgroundColor: bg(e),
+								// color: color(e),
+							}
+						}
 						key={e.name}
 					>
 						{e}

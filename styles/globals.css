@@ -29,14 +29,17 @@
 		@apply dark:bg-[#111111] transition duration-500;
 	}
 }
-@font-face {
-	font-family: "Pacifico";
-	src: url("/fonts/Pacifico.ttf");
-	font-style: medium;
-	font-weight: normal;
-	font-display: swap;
-}
+
 @layer components {
+	.resume {
+		@apply flex items-center justify-start gap-3 px-4 py-2 ml-5 transition-all duration-500 ease-in-out rounded-md dark:text-white w-max;
+	}
+	.app {
+		@apply w-full overflow-x-hidden;
+	}
+	.mobile__nav {
+		@apply fixed overflow-hidden md:overflow-visible transition-[bottom] duration-700 left-0 right-0 flex flex-col items-center bg-white shadow-lg md:bg-transparent  md:gap-3 md:flex-row top-[-15px] mt-20 md:static leading-[5rem] md:leading-none md:shadow-none md:mt-0 dark:bg-[#111111] marker:md:bg-transparent md:dark:bg-transparent;
+	}
 	.navigation__bar {
 		@apply right-0 z-[150] fixed left-0   transition-all duration-500 px-[2rem] md:backdrop-blur-lg  md:bg-white/50 py-7 flex items-center justify-between dark:bg-[#111111] md:dark:bg-[#111111dc] bg-white  dark:border-[#1f2020];
 	}
