@@ -15,7 +15,7 @@ const Footer = () => {
 				<SocialLinks />
 			</div>
 
-			<p className="mb-10 mt-5 text-[#3c3c3c] font-semibold dark:text-[#c8c8c8]">
+			<p className="mb-10 mt-5 text-[#c9c9c9] font-mono dark:text-[#7a7a7a]">
 				Reynald Sampelo
 			</p>
 		</motion.div>

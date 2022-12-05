@@ -35,7 +35,7 @@ export default function projects({ router, setHide }) {
 					}}
 					whileHover={{ x: 10 }}
 					transition={{ duration: 0.2 }}
-					className="flex gap-2 items-center text-[2rem] font-thin font-sans cursor-pointer"
+					className="flex gap-2 items-center dark:text-white text-[2rem] font-thin font-sans cursor-pointer"
 				>
 					Contact -{">"}
 				</motion.p>
