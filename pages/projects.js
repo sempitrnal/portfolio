@@ -25,8 +25,8 @@ export default function projects({ router, setHide }) {
 					return <ProjectCard e={e} key={e.name} />;
 				})}
 			</div>
-			<div className="flex flex-col items-center justify-center  mt-[12rem] mb-[5rem] ">
-				<p className="text-[4.5rem] text-[#292929] dark:text-white">next up</p>
+			<div className="flex flex-col items-center justify-center  mt-[3rem] ">
+				<p className="text-[3.5rem] text-[#2e2e2e] dark:text-white">next up</p>
 
 				<motion.p
 					onClick={() => {
@@ -35,7 +35,7 @@ export default function projects({ router, setHide }) {
 					}}
 					whileHover={{ x: 10 }}
 					transition={{ duration: 0.2 }}
-					className="flex gap-2 items-center text-[3rem] font-thin cursor-pointer text-[#292929] dark:text-white"
+					className="flex gap-2 items-center text-[2rem] font-thin font-sans cursor-pointer"
 				>
 					Contact -{">"}
 				</motion.p>

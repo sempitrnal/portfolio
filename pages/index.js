@@ -44,7 +44,7 @@ export default function Home({ setHide, hide }) {
 	return (
 		<motion.div className="min-h-screen ease-in-out dark:text-white page">
 			<Head>
-				<title>Reynald Sampelo - Frontend Engineer </title>
+				<title>Reynald Sampelo - Software Engineer </title>
 				<meta
 					name="description"
 					content="	An Information Technology student who is passionate and has innate
@@ -188,8 +188,8 @@ export default function Home({ setHide, hide }) {
 						}}
 					/>
 				</div> */}
-				<h2 className="header2 xl:px-[5rem]">About</h2>
-				<div className="flex flex-col xl:px-[5rem] items-center justify-center gap-20 xl:items-start xl:flex-row">
+				<h2 className="header2 md:px-[5rem] ">About</h2>
+				<div className="flex flex-col md:px-[clamp(0rem,20vw,5rem)] items-center justify-center gap-20 xl:items-start xl:flex-row xl:justify-start">
 					<div className="flex flex-col xl:w-[60%]">
 						<motion.p className="paragraph">
 							I am an Information Technology student who is passionate and has
@@ -233,7 +233,7 @@ export default function Home({ setHide, hide }) {
 						</motion.div>
 
 						<div
-							className={`relative group-hover:-translate-y-0.5 group-hover:-translate-x-0.5  dark:group-hover:-translate-x-5 dark:group-hover:-translate-y-5  saturate-0 group-hover:saturate-100   group-hover:shadow-[5px_5px_10px_#00000038]   outline-4 rounded-md w-[18rem] h-[20rem]    md:w-[22rem] md:h-[24rem] ease-in-out duration-[.4s] ${
+							className={`relative group-hover:-translate-y-0.5 group-hover:-translate-x-0.5  dark:group-hover:-translate-x-5 dark:group-hover:-translate-y-5  saturate-0 group-hover:saturate-100   group-hover:shadow-[5px_5px_10px_#00000038]   outline-4 rounded-md w-[clamp(16rem,22vw,20rem)] h-[clamp(18rem,24vw,22rem)] ease-in-out duration-[.4s] ${
 								isLoading
 									? "blur-md scale-110 opacity-70 "
 									: "blur-0 opacity-100 scale-100"
@@ -259,8 +259,8 @@ export default function Home({ setHide, hide }) {
 						return <StackCard key={e.name} e={e} />;
 					})}
 				</div> */}
-				<div className="flex flex-col items-center justify-center  mt-[12rem] mb-[5rem] ">
-					<p className="text-[4.5rem] text-[#292929] dark:text-white">
+				<div className="flex flex-col items-center justify-center  mt-[3rem] ">
+					<p className="text-[3.5rem] text-[#2e2e2e] dark:text-white">
 						next up
 					</p>
 
@@ -271,7 +271,7 @@ export default function Home({ setHide, hide }) {
 						}}
 						whileHover={{ x: 10 }}
 						transition={{ duration: 0.2 }}
-						className="flex gap-2 items-center text-[3rem] font-thin font-sans cursor-pointer"
+						className="flex gap-2 items-center text-[2rem] font-thin font-sans cursor-pointer"
 					>
 						Projects -{">"}
 					</motion.p>

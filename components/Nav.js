@@ -82,9 +82,9 @@ export default function Nav({ setHide, hideNav }) {
 				</p>
 			</Link>
 
-			<div className="flex">
+			<div className="flex ">
 				<div
-					className={`mobile__nav ${
+					className={`mobile__nav  peer   ${
 						navOpen ? "bottom-[0%]" : "bottom-[100%]"
 					} `}
 				>
@@ -93,14 +93,14 @@ export default function Nav({ setHide, hideNav }) {
 							<Link key={i} href={e.path} scroll={false}>
 								<motion.div
 									onClick={() => setNavOpen(false)}
-									className={`relative z-10 flex justify-center px-3 py-2 cursor-pointer ${
+									className={`relative z-10 first:mt-24 md:first:mt-0 mb-20 md:mb-0 flex justify-center px-3 py-2 cursor-pointer ${
 										router.route !== e.path ? "hover:opacity-80" : ""
 									}`}
 								>
 									<p
-										className={`transition-colors duration-500 ${
+										className={`transition-colors  duration-500 ${
 											router.route === e.path
-												? "md:text-white text-purple-800 dark:text-purple-500 md:dark:text-black"
+												? "md:text-white text-purple-800 dark:text-[#4fd9ce] md:dark:text-black"
 												: ""
 										} dark:text-white`}
 									>
