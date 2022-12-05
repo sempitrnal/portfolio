@@ -32,13 +32,13 @@
 
 @layer components {
 	.resume {
-		@apply flex items-center justify-start gap-3 px-4 py-2 ml-5 transition-all duration-500 ease-in-out rounded-md dark:text-white w-max;
+		@apply flex items-center justify-start gap-3 px-4 py-2 transition-all duration-500 ease-in-out rounded-md md:ml-5 dark:text-white w-max;
 	}
 	.app {
 		@apply w-full overflow-x-hidden;
 	}
 	.mobile__nav {
-		@apply fixed overflow-hidden md:overflow-visible transition-[bottom] duration-700 left-0 right-0 flex flex-col items-center bg-white shadow-lg md:bg-transparent  md:gap-3 md:flex-row top-[-15px] mt-20 md:static leading-[5rem] md:leading-none md:shadow-none md:mt-0 dark:bg-[#111111] marker:md:bg-transparent md:dark:bg-transparent;
+		@apply fixed overflow-hidden md:overflow-visible transition-[bottom] duration-700 left-0 right-0 flex flex-col items-center bg-white shadow-lg md:bg-transparent  md:gap-3 md:flex-row top-[-15px] mt-20 md:static  md:leading-none md:shadow-none md:mt-0 dark:bg-[#111111] marker:md:bg-transparent md:dark:bg-transparent;
 	}
 	.navigation__bar {
 		@apply right-0 z-[150] fixed left-0   transition-all duration-500 px-[2rem] md:backdrop-blur-lg  md:bg-white/50 py-7 flex items-center justify-between dark:bg-[#111111] md:dark:bg-[#111111dc] bg-white  dark:border-[#1f2020];
@@ -50,7 +50,7 @@
 		@apply py-1 font-bold transition leading-[5rem] lg:leading-[7rem];
 	}
 	.fe {
-		@apply font-semibold  bg-gradient-to-r  from-[#99cc5f] to-[#4557e0] dark:from-[#fcff50] dark:to-[#87fff7] -translate-y-2    dark:opacity-60 opacity-40 w-max bg-clip-text text-transparent py-1;
+		@apply font-semibold  bg-gradient-to-r  from-[#49a4caf0] to-[#eac018] dark:from-[#fcff50] dark:to-[#87fff7] -translate-y-2    dark:opacity-60 opacity-70 w-max bg-clip-text text-transparent py-1;
 	}
 	.hello {
 		@apply text-3xl absolute left-[50%] -translate-x-[50%] md:left-[3.5rem] asd top-[-1.5rem] text-black transition after:translate-x-1.5 translate-y-3 dark:text-white;
@@ -61,13 +61,16 @@
 	.page {
 		@apply min-h-screen;
 		@apply transition-[padding] duration-100;
-		@apply px-[1.8rem] md:px-[4.8rem] lg:px-[9.8rem] xl:px-[10.8rem] 2xl:px-[20rem] pb-[10rem] pt-[10rem] md:pt-[12rem];
+		@apply px-[1.8rem] md:px-[4.8rem] lg:px-[9.8rem] xl:px-[10.8rem] 2xl:px-[20rem] pb-[4rem] pt-[10rem] md:pt-[12rem];
+	}
+	.footer {
+		@apply px-[1.8rem] md:px-[4.8rem] lg:px-[9.8rem] xl:px-[10.8rem] 2xl:px-[20rem];
 	}
 	.paragraph {
-		@apply w-full duration-500 tracking-[.02rem] text-justify xl:text-start text-lg  font-[300]  text-[#7b7b7b] dark:text-[#a1a1a1] mb-5;
+		@apply w-full duration-500 md:tracking-[.02rem] text-justify text-lg  font-[300]  text-[#7b7b7b] dark:text-[#a1a1a1] mb-5;
 	}
 	.header2 {
-		@apply mt-20 mb-10 text-[2rem] font-semibold duration-500 dark:text-[#e2e2e2] text-[#2a2a2a];
+		@apply mt-20 mb-10 text-[2rem] font-semibold dark:text-[#e2e2e2] text-[#2a2a2a];
 	}
 	.highlight {
 		@apply font-medium text-[#4e4e4e] duration-500 dark:text-[#e1e08f];
