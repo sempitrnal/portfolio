@@ -49,12 +49,8 @@ export default function Nav({ setHide, hideNav }) {
 				document.querySelector("nav").classList.add("shadow-lg");
 				document.querySelector("nav").classList.remove("py-7");
 				document.querySelector("nav").classList.add("py-5");
-				console.log(innerWidth);
-				if (window.scrollY > scrollY && window.innerWidth > 767) {
-					setHide(true);
-				} else {
-					setHide(false);
-				}
+				console.log("scrollY: " + scrollY);
+				console.log("windowscrollY: " + window.scrollY);
 			} else {
 				document
 					.querySelector("nav")
@@ -67,7 +63,8 @@ export default function Nav({ setHide, hideNav }) {
 		};
 		window.addEventListener("scroll", asd);
 		return () => window.removeEventListener("resize", hello);
-	});
+	}, [scrollY]);
+
 	return (
 		<nav className={`${hideNav ? "-translate-y-[80px]" : ""} navigation__bar `}>
 			<Link href={"/"}>
@@ -93,8 +90,10 @@ export default function Nav({ setHide, hideNav }) {
 							<Link key={i} href={e.path} scroll={false}>
 								<motion.div
 									onClick={() => setNavOpen(false)}
-									className={`relative z-10 first:mt-24 md:first:mt-0 mb-20 md:mb-0 flex justify-center px-3 py-2 cursor-pointer ${
-										router.route !== e.path ? "hover:opacity-80" : ""
+									className={`relative z-10 first:mt-24 transition duration-300 md:first:mt-0 mb-20 md:mb-0 flex justify-center px-3 py-2 cursor-pointer rounded-md ${
+										router.route !== e.path
+											? "hover:opacity-80 hover:bg-neutral-200 dark:hover:bg-neutral-700 "
+											: ""
 									}`}
 								>
 									<p
