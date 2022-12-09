@@ -44,14 +44,52 @@ export default function Home({ setHide, hide }) {
 	return (
 		<motion.div className="min-h-screen ease-in-out dark:text-white page">
 			<Head>
-				<title>Reynald Sampelo - Software Engineer </title>
+				<title>Reynald Sampelo - Software Engineer?</title>
 				<meta
 					name="description"
-					content="	An Information Technology student who is passionate and has innate
+					content="An Information Technology student who is passionate and has innate
 					curiosity about Software Development. Aspiring
 					to be a full-stack developer who can adapt quickly and easily grasp
 					emerging technologies."
 				/>
+				<meta name="robots" content="follow, index" />
+				<meta content={meta.description} name="description" />
+				<meta
+					property="og:url"
+					content={`https://reynaldsampelo.com${router.asPath}`}
+				/>
+				<link
+					rel="canonical"
+					href={`https://reynaldsampelo.com${router.asPath}`}
+				/>
+				<meta property="og:type" content="website" />
+				<meta property="og:site_name" content="Reynald Sampelo" />
+				<meta
+					property="og:description"
+					content="An Information Technology student who is passionate and has innate
+					curiosity about Software Development. Aspiring
+					to be a full-stack developer who can adapt quickly and easily grasp
+					emerging technologies."
+				/>
+				<meta
+					property="og:title"
+					content="Reynald Sampelo - Software Engineer?"
+				/>
+
+				<meta name="twitter:card" content="summary_large_image" />
+				<meta name="twitter:site" content="@sempitrnalsh8" />
+				<meta
+					name="twitter:title"
+					content="Reynald Sampelo - Software Engineer?"
+				/>
+				<meta
+					name="twitter:description"
+					content="An Information Technology student who is passionate and has innate
+					curiosity about Software Development. Aspiring
+					to be a full-stack developer who can adapt quickly and easily grasp
+					emerging technologies."
+				/>
+
 				<link rel="apple-touch-icon" href="binary-code.png" />
 				<link rel="shortcut icon" href="/favicon.ico" />
 			</Head>

@@ -38,10 +38,10 @@
 		@apply w-full overflow-x-hidden;
 	}
 	.mobile__nav {
-		@apply fixed overflow-hidden md:overflow-visible transition-[bottom] duration-700 left-0 right-0 flex flex-col items-center bg-white shadow-lg md:bg-transparent  md:gap-3 md:flex-row top-[-15px] mt-20 md:static  md:leading-none md:shadow-none md:mt-0 dark:bg-[#111111] marker:md:bg-transparent md:dark:bg-transparent;
+		@apply fixed overflow-hidden md:overflow-visible transition-[bottom_color] md:transition-[bottom] duration-700 left-0 right-0 flex flex-col items-center bg-white shadow-lg md:bg-transparent  md:gap-3 md:flex-row top-[-5px] mt-20 md:static  md:leading-none md:shadow-none md:mt-0 dark:bg-[#111111] marker:md:bg-transparent md:dark:bg-transparent dark:shadow-white/10;
 	}
 	.navigation__bar {
-		@apply right-0 z-[150] fixed left-0   transition-all duration-500 px-[2rem] md:backdrop-blur-lg  md:bg-white/50 py-7 flex items-center justify-between dark:bg-[#111111] md:dark:bg-[#111111dc] bg-white  dark:border-[#1f2020];
+		@apply right-0 z-[200] fixed left-0   transition-all duration-500 px-[2rem] md:backdrop-blur-lg  md:bg-white/50 py-7 flex items-center justify-between dark:bg-[#111111] md:dark:bg-[#111111dc] bg-white  dark:border-[#1f2020];
 	}
 	.hero {
 		@apply flex justify-center md:justify-start min-h-[60vh] w-full items-center h-full mb-[15rem]  md:mb-[20rem];
