@@ -41,6 +41,7 @@ export const slideDown = {
 export default function Home({ setHide, hide }) {
 	const [isLoading, setLoading] = useState(true);
 	const router = useRouter();
+
 	return (
 		<motion.div className="min-h-screen ease-in-out dark:text-white page">
 			<Head>
@@ -53,7 +54,13 @@ export default function Home({ setHide, hide }) {
 					emerging technologies."
 				/>
 				<meta name="robots" content="follow, index" />
-				<meta content={meta.description} name="description" />
+				<meta
+					content="An Information Technology student who is passionate and has innate
+					curiosity about Software Development. Aspiring
+					to be a full-stack developer who can adapt quickly and easily grasp
+					emerging technologies."
+					name="description"
+				/>
 				<meta
 					property="og:url"
 					content={`https://reynaldsampelo.com${router.asPath}`}
