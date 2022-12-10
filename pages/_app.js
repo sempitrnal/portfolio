@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps, router }) {
 	useEffect(() => {
 		setTimeout(() => {
 			setIntro(false);
-		}, 3000);
+		}, 3200);
 	}, []);
 
 	return (
@@ -24,16 +24,30 @@ function MyApp({ Component, pageProps, router }) {
 			<AnimatePresence mode="wait">
 				{intro && (
 					<motion.div
-						exit={{ opacity: 0 }}
+						initial={{ opacity: 0, scale: 0.5 }}
+						animate={{
+							opacity: 1,
+							scale: 1,
+							transition: {
+								duration: 1,
+								type: "spring",
+								damping: 20,
+								stiffness: 30,
+							},
+						}}
+						exit={{
+							opacity: 0,
+							scale: 0.5,
+							transition: {
+								opacity: { duration: 0.5 },
+								scale: { duration: 1 },
+							},
+						}}
 						className="flex items-center justify-center min-h-[100vh]"
 					>
-						<Image
-							src={"/binary.gif"}
-							width="300"
-							height="300"
-							layout="fixed"
-							alt=""
-						/>
+						<div className="w-[150px] relative h-[150px] ">
+							<Image src={"/binary1.gif"} layout="fill" alt="" />
+						</div>
 					</motion.div>
 				)}
 			</AnimatePresence>
@@ -41,7 +55,7 @@ function MyApp({ Component, pageProps, router }) {
 				{!intro && (
 					<motion.div
 						initial={{ opacity: 0 }}
-						animate={{ opacity: 1, transition: { duration: 1, delay: 0.5 } }}
+						animate={{ opacity: 1, transition: { duration: 1, delay: 0.8 } }}
 						className="app"
 					>
 						<Nav hideNav={hideNav} setHide={setHide} />
