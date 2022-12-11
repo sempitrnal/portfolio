@@ -1,5 +1,5 @@
 import Link from "next/link";
-import DarkMode from "./DarkMode";
+import DarkMode from "../components/DarkMode";
 import { AnimatePresence, motion } from "framer-motion";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
@@ -49,8 +49,6 @@ export default function Nav({ setHide, hideNav }) {
 				document.querySelector("nav").classList.add("shadow-lg");
 				document.querySelector("nav").classList.remove("py-7");
 				document.querySelector("nav").classList.add("py-5");
-				console.log("scrollY: " + scrollY);
-				console.log("windowscrollY: " + window.scrollY);
 			} else {
 				document
 					.querySelector("nav")
@@ -62,8 +60,11 @@ export default function Nav({ setHide, hideNav }) {
 			setScrollY(window.scrollY);
 		};
 		window.addEventListener("scroll", asd);
-		return () => window.removeEventListener("resize", hello);
-	}, [scrollY]);
+		return () => {
+			window.removeEventListener("resize", hello);
+			window.removeEventListener("scroll", asd);
+		};
+	}, [scrollY, innerWidth]);
 
 	return (
 		<nav className={`${hideNav ? "-translate-y-[80px]" : ""} navigation__bar `}>
@@ -92,7 +93,7 @@ export default function Nav({ setHide, hideNav }) {
 									onClick={() => setNavOpen(false)}
 									className={`relative z-10 first:mt-24 transition duration-300 md:first:mt-0 mb-20 md:mb-0 flex justify-center px-3 py-2 cursor-pointer rounded-md ${
 										router.route !== e.path
-											? "hover:opacity-80 hover:bg-neutral-200 dark:hover:bg-neutral-700 "
+											? "hover:opacity-80 hover:bg-neutral-100 dark:hover:bg-neutral-800 "
 											: ""
 									}`}
 								>
@@ -100,7 +101,7 @@ export default function Nav({ setHide, hideNav }) {
 										className={`transition-colors  duration-500 ${
 											router.route === e.path
 												? "md:text-white text-purple-800 dark:text-[#4fd9ce] md:dark:text-black"
-												: ""
+												: "text-black/40 dark:text-white/40"
 										} dark:text-white`}
 									>
 										{e.label}
@@ -119,8 +120,8 @@ export default function Nav({ setHide, hideNav }) {
 						onClick={() => setNavOpen(false)}
 						className={`resume ${
 							innerWidth > 767
-								? "shadow-[0px_0px_0px_1px_#2e2e2e] hover:shadow-[0px_0px_0px_1.5px_#2e2e2e]  dark:shadow-[0px_0px_0px_1px_#d0d0d0] dark:hover:shadow-[0px_0px_0px_1.5px_#d0d0d0]"
-								: ""
+								? "shadow-[0px_0px_0px_1px_#2e2e2e]  hover:shadow-[0px_0px_0px_1.5px_#2e2e2e]  dark:shadow-[0px_0px_0px_1px_#d0d0d0] dark:hover:shadow-[0px_0px_0px_1.5px_#d0d0d0]  "
+								: "text-white bg-neutral-800"
 						} hover:shad `}
 						href="/reynaldsampelo_resume.pdf"
 						target={"_blank"}

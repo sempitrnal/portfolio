@@ -1,5 +1,5 @@
-import SocialLinks from "./SocialLinks";
 import { motion } from "framer-motion";
+import SocialLinks from "../components/SocialLinks";
 const Footer = () => {
 	return (
 		<motion.div
