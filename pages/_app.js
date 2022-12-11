@@ -12,10 +12,14 @@ import Footer from "../layout/Footer";
 function MyApp({ Component, pageProps, router }) {
 	const [hideNav, setHide] = useState(false);
 	useDarkMode();
-	const [intro, setIntro] = useState(false);
+	const [intro, setIntro] = useState(true);
 	useEffect(() => {
 		setTimeout(() => {
 			setIntro(false);
+			window.document.documentElement.style.overflowY = "hidden";
+			setTimeout(() => {
+				window.document.documentElement.style.overflowY = "scroll";
+			}, 1800);
 		}, 3200);
 	}, []);
 
@@ -58,13 +62,13 @@ function MyApp({ Component, pageProps, router }) {
 						animate={{
 							opacity: 1,
 							y: 0,
-							transition: { duration: 1, delay: 0.8 },
+							transition: { duration: 1, delay: 0.5 },
 						}}
 						className="app"
 					>
 						<Nav hideNav={hideNav} setHide={setHide} />
 						<AnimatePresence
-							exitBeforeEnter
+							mode="wait"
 							initial={false}
 							onExitComplete={() => window.scrollTo(0, 0)}
 						>
