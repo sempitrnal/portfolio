@@ -135,33 +135,6 @@ export default function Home({ setHide, hide }) {
 				variants={slideDown}
 				className=""
 			>
-				{" "}
-				{/* <div className="relative lg:hidden w-[15rem] h-[15rem] lg:w-[22rem] lg:h-[22rem]">
-						<motion.div className="absolute  top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
-							<ClipLoader
-								cssOverride={{ borderWidth: "3px" }}
-								loading={isLoading}
-								color="#52594A"
-								size={80}
-							></ClipLoader>
-						</motion.div>
-						<div
-							className={`relative lg:hidden w-[15rem] h-[15rem] overflow-hidden rounded-full   lg:w-[22rem] lg:h-[22rem] ease-in-out duration-[.5s] ${
-								isLoading
-									? "blur-md scale-110 opacity-70 "
-									: "blur-0 opacity-100 scale-100"
-							}`}
-						>
-							<Image
-								src={"/bo.webp"}
-								layout="fill"
-								objectFit="contain"
-								alt=""
-								className={``}
-								onLoadingComplete={() => setLoading(false)}
-							/>
-						</div>
-					</div> */}
 				<div className="hero">
 					<div className="flex flex-col items-center md:items-start">
 						<div className="relative flex mb-3 text-center md:text-start md:mb-0">
@@ -170,7 +143,7 @@ export default function Home({ setHide, hide }) {
 						</div>
 						<motion.h2 className="fe ">Aspiring Software Engineer?</motion.h2>
 						<div className="flex flex-col xs:flex-row items-center xs:items-end gap-1.5 my-7  -translate-y-2 ">
-							<p className="text-xl text-[#909090]">
+							<p className="text-xl mt-24 md:mt-0 text-[#909090]">
 								I like to build stuff with
 							</p>
 							<div className=" text-xl text-[#909090] font-semibold">
@@ -259,7 +232,7 @@ export default function Home({ setHide, hide }) {
 						</p> */}
 					</div>
 					<div className="relative group ">
-						<div className="absolute items-center flex gap-1 font-['Nanum_Pen_Script'] text-lg rotate-[14deg] right-[-20px] md:right-[-50px] top-[-3rem] z-50">
+						<div className="absolute items-center flex gap-1 font-['Nanum_Pen_Script'] text-lg rotate-[14deg] right-[-20px] md:right-[-50px] top-[-3.5rem] z-50">
 							hover me in{" "}
 							{
 								<div className="text-sm -translate-y-0.5 ml-0.5">
@@ -278,7 +251,7 @@ export default function Home({ setHide, hide }) {
 						</motion.div>
 
 						<div
-							className={`relative group-hover:-translate-y-0.5 group-hover:-translate-x-0.5  dark:group-hover:-translate-x-5 dark:group-hover:-translate-y-5  saturate-0 group-hover:saturate-100   group-hover:shadow-[5px_5px_10px_#00000038]   outline-4 rounded-md w-[clamp(16rem,22vw,20rem)] h-[clamp(18rem,24vw,22rem)] ease-in-out duration-[.4s] ${
+							className={`relative group-hover:-translate-y-0.5 group-hover:-translate-x-0.5  dark:group-hover:-translate-x-5 dark:group-hover:-translate-y-5  saturate-0 group-hover:saturate-100   group-hover:shadow-[5px_5px_10px_#00000038]   outline-4 rounded-md w-[clamp(14rem,22vw,20rem)] h-[clamp(16rem,24vw,22rem)] ease-in-out duration-[.4s] ${
 								isLoading
 									? "blur-md scale-110 opacity-70 "
 									: "blur-0 opacity-100 scale-100"
@@ -294,8 +267,8 @@ export default function Home({ setHide, hide }) {
 							/>{" "}
 							<div className="hidden w-full h-full duration-500 dark:block -z-10 asdd group-hover:translate-x-5 group-hover:translate-y-5 before:border-[3px] group-hover:opacity-50  before:border-white  before:border-solid"></div>
 							<div className="absolute top-0 hidden w-full h-full duration-500 delay-100 dark:block -z-10 asdd group-hover:translate-x-10 group-hover:translate-y-10  before:border-[3px]  before:border-solid  before:border-[#ffffff46]"></div>
-							<div className="absolute top-0 hidden w-full h-full duration-500 delay-150 dark:block -z-10 asdd group-hover:translate-x-[3.75rem] group-hover:translate-y-[3.75rem]  before:border-[3px]  before:border-solid  before:border-[#ffffff13]"></div>
-							<div className="absolute top-0 hidden w-full h-full duration-500 delay-300 dark:block -z-10 asdd group-hover:translate-x-[5rem] group-hover:translate-y-[5rem]  before:border-[3px]  before:border-solid  before:border-[#ffffff05]"></div>
+							<div className="absolute top-0 hidden w-full h-full duration-500 delay-150 dark:block -z-10 asdd md:group-hover:translate-x-[3.75rem] md:group-hover:translate-y-[3.75rem]  before:border-[3px]  before:border-solid  before:border-[#ffffff13]"></div>
+							<div className="absolute top-0 hidden w-full h-full duration-500 delay-300 dark:block -z-10 asdd md:group-hover:translate-x-[5rem] md:group-hover:translate-y-[5rem]  before:border-[3px]  before:border-solid  before:border-[#ffffff05]"></div>
 						</div>
 					</div>
 				</div>
@@ -304,7 +277,7 @@ export default function Home({ setHide, hide }) {
 						return <StackCard key={e.name} e={e} />;
 					})}
 				</div> */}
-				<div className="flex flex-col items-center justify-center  mt-[3rem] ">
+				<div className="flex flex-col items-center justify-center mt-40 mb-20 ">
 					<p className="text-[3.5rem] text-[#2e2e2e] dark:text-white">
 						next up
 					</p>

@@ -26,7 +26,7 @@ const ProjectCard = ({ e }) => {
 		return e !== "Firebase" && e !== "Vite" ? "white" : "";
 	};
 	return (
-		<div className="px-10 py-16 dark:text-white">
+		<div className="px-10 py-16 text-[#3c3c3c] dark:text-white">
 			<h1 className="mb-3 text-3xl">{e.name}</h1>
 			<div className="flex flex-wrap gap-3 font-mono ">
 				{e.stack.map((e) => (

@@ -22,7 +22,7 @@
 	font-size: clamp(5rem, 8vw, 6.5rem);
 }
 .fe {
-	font-size: clamp(2rem, 3.5vw, 3.5rem);
+	font-size: clamp(1.5rem, 3.5vw, 3.5rem);
 }
 @layer base {
 	body {
@@ -44,7 +44,7 @@
 		@apply right-0 z-[200] fixed left-0   transition-all duration-500 px-[2rem] md:backdrop-blur-lg  md:bg-white/50 py-7 flex items-center justify-between dark:bg-[#111111] md:dark:bg-[#111111dc] bg-white  dark:border-[#1f2020];
 	}
 	.hero {
-		@apply flex justify-center md:justify-start min-h-[60vh] w-full items-center h-full mb-[15rem]  md:mb-[20rem];
+		@apply flex justify-center md:justify-start min-h-[40vh] w-full items-center h-full mb-[15rem]  md:mb-[20rem] mt-16 md:mt-20;
 	}
 	.rs {
 		@apply py-1 font-bold transition leading-[5rem] lg:leading-[7rem];

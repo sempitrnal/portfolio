@@ -25,7 +25,7 @@ export default function projects({ router, setHide }) {
 					return <ProjectCard e={e} key={e.name} />;
 				})}
 			</div>
-			<div className="flex flex-col items-center justify-center  mt-[3rem] ">
+			<div className="flex flex-col items-center justify-center mb-28 mt-28 ">
 				<p className="text-[3.5rem] text-[#2e2e2e] dark:text-white">next up</p>
 
 				<motion.p

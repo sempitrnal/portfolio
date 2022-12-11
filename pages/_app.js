@@ -12,7 +12,7 @@ import Footer from "../layout/Footer";
 function MyApp({ Component, pageProps, router }) {
 	const [hideNav, setHide] = useState(false);
 	useDarkMode();
-	const [intro, setIntro] = useState(true);
+	const [intro, setIntro] = useState(false);
 	useEffect(() => {
 		setTimeout(() => {
 			setIntro(false);
