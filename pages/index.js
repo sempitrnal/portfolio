@@ -45,7 +45,7 @@ export default function Home({ setHide, hide }) {
 	return (
 		<motion.div className="min-h-screen ease-in-out dark:text-white page">
 			<Head>
-				<title>Reynald Sampelo - Software Engineer?</title>
+				<title>Reynald Sampelo - Aspiring Software Engineer?</title>
 				<meta
 					name="description"
 					content="An Information Technology student who is passionate and has innate
@@ -168,7 +168,7 @@ export default function Home({ setHide, hide }) {
 							<p className="hello">Hello! I am</p>
 							<span className=" rs colorful_text">Reynald Sampelo</span>
 						</div>
-						<motion.h2 className="fe ">Software Engineer?</motion.h2>
+						<motion.h2 className="fe ">Aspiring Software Engineer?</motion.h2>
 						<div className="flex flex-col xs:flex-row items-center xs:items-end gap-1.5 my-7  -translate-y-2 ">
 							<p className="text-xl text-[#909090]">
 								I like to build stuff with
