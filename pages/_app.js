@@ -19,7 +19,7 @@ function MyApp({ Component, pageProps, router }) {
 			window.document.documentElement.style.overflowY = "hidden";
 			setTimeout(() => {
 				window.document.documentElement.style.overflowY = "scroll";
-			}, 1800);
+			}, 2100);
 		}, 3200);
 	}, []);
 
@@ -62,7 +62,7 @@ function MyApp({ Component, pageProps, router }) {
 						animate={{
 							opacity: 1,
 							y: 0,
-							transition: { duration: 1, delay: 0.5 },
+							transition: { duration: 1, delay: 0.8 },
 						}}
 						className="app"
 					>

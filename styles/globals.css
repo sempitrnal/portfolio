@@ -29,9 +29,7 @@
 		@apply dark:bg-[#111111] transition duration-500;
 	}
 }
-*::-webkit-scrollbar {
-	display: none; /* Safari and Chrome */
-}
+
 @layer components {
 	.resume {
 		@apply flex items-center justify-start gap-3 px-4 py-2 ease-in-out rounded-md md:ml-5 dark:text-white w-max;
