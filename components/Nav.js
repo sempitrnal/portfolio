@@ -68,9 +68,10 @@ export default function Nav({ setHide, hideNav }) {
 
 	return (
 		<nav className={`${hideNav ? "-translate-y-[80px]" : ""} navigation__bar `}>
-			<Link href={"/"}>
+			<Link href={"/"} scroll={false}>
 				<p className="text-xl font-semibold text-[#3c3c3c] transition duration-500 cursor-pointer dark:text-white sm:block">
 					<Image
+						onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
 						width={30}
 						height={30}
 						alt=""

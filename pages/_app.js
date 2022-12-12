@@ -6,8 +6,8 @@ import { useEffect, useState } from "react";
 import useDarkMode from "../hooks/useDarkMode";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import Nav from "../layout/Nav";
-import Footer from "../layout/Footer";
+import Nav from "../components/Nav";
+import Footer from "../components/Footer";
 
 function MyApp({ Component, pageProps, router }) {
 	const [hideNav, setHide] = useState(false);
