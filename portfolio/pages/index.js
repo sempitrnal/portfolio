@@ -13,7 +13,7 @@ import { useEffect, useState } from "react";
 import ClipLoader from "react-spinners/ClipLoader";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import bo from "../public/myphoto.jpg";
+import bo from "../public/bo.jpg";
 /* eslint-disable react/no-unescaped-entities */
 export const slideDown = {
 	initial: {
