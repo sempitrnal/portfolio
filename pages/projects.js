@@ -17,7 +17,7 @@ export default function projects({ router, setHide }) {
 			<Head>
 				<title>Projects - Reynald Sampelo</title>
 			</Head>
-			<h1 className="mb-10 text-6xl  font-semibold text-[#3c3c3c] dark:text-white">
+			<h1 className="mb-10 text-6xl  font-semibold text-[#3c3c3c] dark:text-[#e8e8e8]">
 				Projects
 			</h1>
 			<div className="flex flex-col gap-5">
@@ -26,7 +26,9 @@ export default function projects({ router, setHide }) {
 				})}
 			</div>
 			<div className="flex flex-col items-center justify-center mb-28 mt-28 ">
-				<p className="text-[3.5rem] text-[#2e2e2e] dark:text-white">next up</p>
+				<p className="text-[3.5rem] text-[#2e2e2e] dark:text-[#e8e8e8]">
+					next up
+				</p>
 
 				<motion.p
 					onClick={() => {

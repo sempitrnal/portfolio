@@ -13,7 +13,7 @@ import { useEffect, useState } from "react";
 import ClipLoader from "react-spinners/ClipLoader";
 import Link from "next/link";
 import { useRouter } from "next/router";
-
+import bo from "/public/bo.JPG";
 /* eslint-disable react/no-unescaped-entities */
 export const slideDown = {
 	initial: {
@@ -232,7 +232,7 @@ export default function Home({ setHide, hide }) {
 						</p> */}
 					</div>
 					<div className="relative group ">
-						<div className="absolute items-center flex gap-1 font-['Nanum_Pen_Script'] text-lg rotate-[14deg] right-[-20px] md:right-[-50px] top-[-3.5rem] z-50">
+						{/* <div className="absolute items-center flex gap-1 font-['Nanum_Pen_Script'] text-lg rotate-[14deg] right-[-20px] md:right-[-50px] top-[-3.5rem] z-50">
 							hover me in{" "}
 							{
 								<div className="text-sm -translate-y-0.5 ml-0.5">
@@ -240,7 +240,7 @@ export default function Home({ setHide, hide }) {
 								</div>
 							}{" "}
 							mode!
-						</div>
+						</div> */}
 						<motion.div className="absolute  top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
 							<ClipLoader
 								cssOverride={{ borderWidth: "3px" }}
@@ -258,17 +258,17 @@ export default function Home({ setHide, hide }) {
 							}`}
 						>
 							<Image
-								src={"/bo.jpg"}
+								src={bo}
 								layout="fill"
 								objectFit="cover"
 								alt=""
-								className={`rounded-[4px] z-50`}
+								className={`rounded-[4px] z-50 object-[0px_-120px]`}
 								onLoadingComplete={() => setLoading(false)}
 							/>{" "}
 							<div className="hidden w-full h-full duration-500 dark:block -z-10 asdd group-hover:translate-x-5 group-hover:translate-y-5 before:border-[3px] group-hover:opacity-50  before:border-white  before:border-solid"></div>
-							<div className="absolute top-0 hidden w-full h-full duration-500 delay-100 dark:block -z-10 asdd group-hover:translate-x-10 group-hover:translate-y-10  before:border-[3px]  before:border-solid  before:border-[#ffffff46]"></div>
-							<div className="absolute top-0 hidden w-full h-full duration-500 delay-150 dark:block -z-10 asdd md:group-hover:translate-x-[3.75rem] md:group-hover:translate-y-[3.75rem]  before:border-[3px]  before:border-solid  before:border-[#ffffff13]"></div>
-							<div className="absolute top-0 hidden w-full h-full duration-500 delay-300 dark:block -z-10 asdd md:group-hover:translate-x-[5rem] md:group-hover:translate-y-[5rem]  before:border-[3px]  before:border-solid  before:border-[#ffffff05]"></div>
+							<div className="absolute top-0 hidden w-full h-full duration-500 dark:block -z-10 asdd group-hover:translate-x-10 group-hover:translate-y-10  before:border-[3px]  before:border-solid  before:border-[#ffffff46]"></div>
+							<div className="absolute top-0 hidden w-full h-full duration-500  dark:block -z-10 asdd md:group-hover:translate-x-[3.75rem] md:group-hover:translate-y-[3.75rem]  before:border-[3px]  before:border-solid  before:border-[#ffffff13]"></div>
+							{/* <div className="absolute top-0 hidden w-full h-full duration-500 delay-300 dark:block -z-10 asdd md:group-hover:translate-x-[5rem] md:group-hover:translate-y-[5rem]  before:border-[3px]  before:border-solid  before:border-[#ffffff05]"></div> */}
 						</div>
 					</div>
 				</div>
