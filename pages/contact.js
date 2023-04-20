@@ -18,10 +18,9 @@ export default function contact() {
 					Get in touch!
 				</h1>
 				<p className="paragraph w-full md:w-[70%]">
-					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti ab
-					incidunt necessitatibus unde provident cum accusamus quod vero nobis,
-					quaerat nemo quisquam. Maxime inventore non voluptate eligendi ut odit
-					vero.
+					{
+						"	Thank you for taking the time to visit my portfolio website! If you have any questions, comments, or would like to collaborate with me on a project, please don't hesitate to contact me by clicking the button below."
+					}
 				</p>
 				<Button
 					email
