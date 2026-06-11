@@ -1,46 +1,44 @@
-import React from "react";
-
 import { FaInstagram, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import { FiGithub } from "react-icons/fi";
+
 const socials = [
-	{
-		name: "Twitter",
-		link: "https://twitter.com/sempitrnalsh8",
-		icon: <FaTwitter />,
-	},
-	{
-		name: "Instagram",
-		link: "https://instagram.com/__brownrecluse",
-		icon: <FaInstagram />,
-	},
-	{
-		name: "LinkedIn",
-		link: "https://linkedin.com/in/sampeloreynald",
-		icon: <FaLinkedinIn />,
-	},
-	{
-		name: "Github",
-		link: "https://github.com/whitewaterjunkie",
-		icon: <FiGithub />,
-	},
+  {
+    name: "Twitter",
+    link: "https://twitter.com/sempitrnalsh8",
+    icon: <FaTwitter />,
+  },
+  {
+    name: "Instagram",
+    link: "https://instagram.com/__brownrecluse",
+    icon: <FaInstagram />,
+  },
+  {
+    name: "LinkedIn",
+    link: "https://linkedin.com/in/sampeloreynald",
+    icon: <FaLinkedinIn />,
+  },
+  {
+    name: "Github",
+    link: "https://github.com/whitewaterjunkie",
+    icon: <FiGithub />,
+  },
 ];
+
 export default function SocialLinks() {
-	return (
-		<div className="flex items-center gap-2">
-			{socials.map((e) => {
-				return (
-					<a
-						aria-label={e.name}
-						target="_blank"
-						key={e.name}
-						href={e.link}
-						className={`${e.color} text-[#3d3d3d] dark:text-white text-[2rem] saturate-0 hover:opacity-100 transition duration-500 opacity-70 `}
-						rel="noreferrer"
-					>
-						{e.icon}
-					</a>
-				);
-			})}
-		</div>
-	);
+  return (
+    <div className="flex items-center gap-3">
+      {socials.map((e) => (
+        <a
+          aria-label={e.name}
+          target="_blank"
+          key={e.name}
+          href={e.link}
+          className="flex items-center justify-center w-10 h-10 border-2 border-black dark:border-white text-black dark:text-white hover:bg-[#ffe600] dark:hover:bg-[#00ff88] hover:text-black transition-colors duration-150 rounded-sm"
+          rel="noreferrer"
+        >
+          {e.icon}
+        </a>
+      ))}
+    </div>
+  );
 }

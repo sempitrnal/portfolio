@@ -1,18 +1,13 @@
-import DarkMode from "../components/DarkMode";
-import useDarkMode from "../hooks/useDarkMode";
-import { AnimatePresence, motion } from "framer-motion";
-import Typewriter from "typewriter-effect";
+import { motion } from "framer-motion";
 import Head from "next/head";
-import SocialLinks from "../components/SocialLinks";
-import { BsArrowBarRight, BsDownload, BsMoon } from "react-icons/bs";
-import { FiDownload } from "react-icons/fi";
-import { tech_stack } from "../utils/tech_stack";
-import StackCard from "../components/StackCard";
 import Image from "next/image";
-import { useEffect, useState } from "react";
-import ClipLoader from "react-spinners/ClipLoader";
-import Link from "next/link";
 import { useRouter } from "next/router";
+import { useState } from "react";
+import ClipLoader from "react-spinners/ClipLoader";
+import Typewriter from "typewriter-effect";
+import SkillCard from "../components/SkillCard";
+import SocialLinks from "../components/SocialLinks";
+import { skills } from "../utils/skills";
 import bo from "/public/bo.jpg";
 /* eslint-disable react/no-unescaped-entities */
 export const slideDown = {
@@ -45,20 +40,14 @@ export default function Home({ setHide, hide }) {
   return (
     <motion.div className="min-h-screen ease-in-out dark:text-white page">
       <Head>
-        <title>Reynald Sampelo - Software Engineer?</title>
+        <title>Reynald Sampelo - Software Engineer</title>
         <meta
           name="description"
-          content="An Information Technology student who is passionate and has innate
-					curiosity about Software Development. Aspiring
-					to be a full-stack developer who can adapt quickly and easily grasp
-					emerging technologies."
+          content="Full-stack software engineer building modern web applications with React, Next.js, .NET, and C#."
         />
         <meta name="robots" content="follow, index" />
         <meta
-          content="An Information Technology student who is passionate and has innate
-					curiosity about Software Development. Aspiring
-					to be a full-stack developer who can adapt quickly and easily grasp
-					emerging technologies."
+          content="Full-stack software engineer building modern web applications with React, Next.js, .NET, and C#."
           name="description"
         />
         <meta
@@ -73,28 +62,22 @@ export default function Home({ setHide, hide }) {
         <meta property="og:site_name" content="Reynald Sampelo" />
         <meta
           property="og:description"
-          content="An Information Technology student who is passionate and has innate
-					curiosity about Software Development. Aspiring
-					to be a full-stack developer who can adapt quickly and easily grasp
-					emerging technologies."
+          content="Full-stack software engineer building modern web applications with React, Next.js, .NET, and C#."
         />
         <meta
           property="og:title"
-          content="Reynald Sampelo - Software Engineer?"
+          content="Reynald Sampelo - Software Engineer"
         />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@sempitrnalsh8" />
         <meta
           name="twitter:title"
-          content="Reynald Sampelo - Software Engineer?"
+          content="Reynald Sampelo - Software Engineer"
         />
         <meta
           name="twitter:description"
-          content="An Information Technology student who is passionate and has innate
-					curiosity about Software Development. Aspiring
-					to be a full-stack developer who can adapt quickly and easily grasp
-					emerging technologies."
+          content="Full-stack software engineer building modern web applications with React, Next.js, .NET, and C#."
         />
 
         <link rel="apple-touch-icon" href="binary-code.png" />
@@ -136,30 +119,65 @@ export default function Home({ setHide, hide }) {
         className=""
       >
         <div className="hero">
-          <div className="flex flex-col items-center md:items-start">
-            <div className="relative flex mb-3 text-center md:text-start md:mb-0">
-              <p className="hello">Hello! I am</p>
-              <span className=" rs colorful_text">Reynald Sampelo</span>
-            </div>
-            <motion.h2 className="fe ">Software Engineer?</motion.h2>
-            <div className="flex flex-col xs:flex-row items-center xs:items-end gap-1.5 my-7  -translate-y-2 ">
-              <p className="text-xl mt-24 md:mt-0 text-[#909090]">
-                I like to build stuff with
-              </p>
-              <div className=" text-xl text-[#909090] font-semibold">
-                <Typewriter
-                  options={{
-                    strings: ["JavaScript", "React", "Next", "Python"],
-                    autoStart: true,
-                    loop: true,
-                    pauseFor: 1000,
-                    deleteSpeed: 50,
-                  }}
-                />
+          <div className="flex flex-col md:flex-row items-center justify-between w-full gap-10 md:gap-16">
+            <div className="flex flex-col items-center md:items-start text-center md:text-left">
+              <div className="relative flex mb-3 md:mb-0">
+                <p className="hello">Hello! I am</p>
+                <span className="rs colorful_text">Reynald Sampelo</span>
+              </div>
+              <motion.h2 className="fe">Full-Stack Developer</motion.h2>
+              <div className="flex flex-col xs:flex-row items-center xs:items-end gap-1.5 my-7 -translate-y-2">
+                <p className="text-xl text-black/60 dark:text-white/60 font-bold">
+                  I build with
+                </p>
+                <div className="text-xl text-black/60 dark:text-white/60 font-bold">
+                  <Typewriter
+                    options={{
+                      strings: [
+                        "JavaScript",
+                        "React",
+                        "Next.js",
+                        ".NET",
+                        "C#",
+                        "Azure",
+                      ],
+                      autoStart: true,
+                      loop: true,
+                      pauseFor: 1000,
+                      deleteSpeed: 50,
+                    }}
+                  />
+                </div>
+              </div>
+              <div className="">
+                <SocialLinks />
               </div>
             </div>
-            <div className="">
-              <SocialLinks />
+            <div className="relative group shrink-0">
+              <motion.div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
+                <ClipLoader
+                  cssOverride={{ borderWidth: "3px" }}
+                  loading={isLoading}
+                  color="#000000"
+                  size={60}
+                />
+              </motion.div>
+              <div
+                className={`nb-card relative w-[clamp(14rem,22vw,20rem)] h-[clamp(16rem,24vw,22rem)] overflow-hidden group-hover:shadow-none group-hover:translate-x-[2px] group-hover:translate-y-[2px] transition-all duration-150 ${
+                  isLoading
+                    ? "blur-md scale-105 opacity-70"
+                    : "blur-0 opacity-100 scale-100"
+                }`}
+              >
+                <Image
+                  src={bo}
+                  layout="fill"
+                  objectFit="cover"
+                  alt=""
+                  className="z-10"
+                  onLoadingComplete={() => setLoading(false)}
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -200,79 +218,100 @@ export default function Home({ setHide, hide }) {
 						}}
 					/>
 				</div> */}
-        <h2 className="header2 md:px-[5rem] ">About</h2>
-        <div className="flex flex-col md:px-[clamp(0rem,20vw,5rem)] items-center justify-center gap-20 xl:items-start xl:flex-row xl:justify-start">
-          <div className="flex flex-col xl:w-[60%]">
-            <motion.p className="paragraph">
-              I am an Information Technology student who is passionate and has
-              innate curiosity about{" "}
-              <span className="highlight">Software Development.</span> My
-              aspiration is to become a full-stack developer; one that can
-              easily adapt and grasp emerging concepts in the ever-changing
-              world of technology.
+        <h2 className="header2">About</h2>
+        <div className="flex flex-col items-start gap-10">
+          <div className="flex flex-col w-full">
+            <motion.p className="paragraph text-xl md:text-2xl font-bold leading-snug">
+              I'm a software engineer based in Cebu who enjoys building web
+              applications from the ground up. I work primarily with{" "}
+              <span className="highlight">React</span>,{" "}
+              <span className="highlight">Next.js</span>,{" "}
+              <span className="highlight">.NET</span>, and{" "}
+              <span className="highlight">C#</span>, and I like figuring out
+              practical solutions to real problems — whether that's creating a
+              smooth user experience, building scalable APIs, or improving how
+              systems work behind the scenes.
             </motion.p>
             <p className="paragraph">
-              My interests include Web and Mobile Application Development. I am
-              comfortable on working with ReactJS/NextJS with Firebase/Supabase
-              as my backend for small scale applications. I'm still learning
-              React Native, MongoDB, Node.js, and ExpressJS in order to
-              incorporate them into my future projects.
+              Over the years, I've worked on projects involving{" "}
+              <span className="highlight">cloud services</span>,{" "}
+              <span className="highlight">databases</span>,{" "}
+              <span className="highlight">authentication systems</span>,{" "}
+              <span className="highlight">localization</span>, and{" "}
+              <span className="highlight">business applications</span>. I care
+              about writing clean, maintainable code and building products that
+              people actually enjoy using.
             </p>
-            {/* <p className="paragraph">
-							Other than coding, I enjoy spending my time practicing “Yaw-Yan” —
-							a Filipino martial art. I also enjoy surfskating, freediving,
-							photography, videography, and playing musical instruments in my
-							free time.
-						</p> */}
-          </div>
-          <div className="relative group ">
-            {/* <div className="absolute items-center flex gap-1 font-['Nanum_Pen_Script'] text-lg rotate-[14deg] right-[-20px] md:right-[-50px] top-[-3.5rem] z-50">
-							hover me in{" "}
-							{
-								<div className="text-sm -translate-y-0.5 ml-0.5">
-									<BsMoon />
-								</div>
-							}{" "}
-							mode!
-						</div> */}
-            <motion.div className="absolute  top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
-              <ClipLoader
-                cssOverride={{ borderWidth: "3px" }}
-                loading={isLoading}
-                color="#52594A"
-                size={80}
-              ></ClipLoader>
-            </motion.div>
-
-            <div
-              className={`relative group-hover:-translate-y-0.5 group-hover:-translate-x-0.5  dark:group-hover:-translate-x-5 dark:group-hover:-translate-y-5  saturate-0 group-hover:saturate-100   group-hover:shadow-[5px_5px_10px_#00000038]   outline-4 rounded-md w-[clamp(14rem,22vw,20rem)] h-[clamp(16rem,24vw,22rem)] ease-in-out duration-[.4s] ${
-                isLoading
-                  ? "blur-md scale-110 opacity-70 "
-                  : "blur-0 opacity-100 scale-100"
-              }`}
-            >
-              <Image
-                src={bo}
-                layout="fill"
-                objectFit="cover"
-                alt=""
-                className={`rounded-[4px] z-50 object-[0px_-120px]`}
-                onLoadingComplete={() => setLoading(false)}
-              />{" "}
-              <div className="hidden w-full h-full duration-500 dark:block -z-10 asdd group-hover:translate-x-5 group-hover:translate-y-5 before:border-[3px] group-hover:opacity-50  before:border-white  before:border-solid"></div>
-              <div className="absolute top-0 hidden w-full h-full duration-500 dark:block -z-10 asdd group-hover:translate-x-10 group-hover:translate-y-10  before:border-[3px]  before:border-solid  before:border-[#ffffff46]"></div>
-              <div className="absolute top-0 hidden w-full h-full duration-500  dark:block -z-10 asdd md:group-hover:translate-x-[3.75rem] md:group-hover:translate-y-[3.75rem]  before:border-[3px]  before:border-solid  before:border-[#ffffff13]"></div>
-              {/* <div className="absolute top-0 hidden w-full h-full duration-500 delay-300 dark:block -z-10 asdd md:group-hover:translate-x-[5rem] md:group-hover:translate-y-[5rem]  before:border-[3px]  before:border-solid  before:border-[#ffffff05]"></div> */}
-            </div>
+            <p className="paragraph">
+              When I'm away from my keyboard, I'm usually playing guitar,
+              producing music, working out, or hanging around local hardcore
+              shows. Music has always been a big part of my life, and it gives
+              me the same creative outlet that programming does.
+            </p>
           </div>
         </div>
-        {/* <div className="grid w-full grid-cols-3 gap-6 my-10 mb-24 md:flex md:flex-wrap">
-					{tech_stack.map((e) => {
-						return <StackCard key={e.name} e={e} />;
-					})}
-				</div> */}
-        <div className="flex flex-col items-center justify-center mt-40 mb-20 ">
-          <p className="text-[3.5rem] text-[#2e2e2e] dark:text-white">
+        <h2 className="header2">Experience</h2>
+        <div className="flex flex-col gap-6">
+          {[
+            {
+              role: "Software Developer",
+              company: "Full-time",
+              date: "Jul 2023 — Jun 2025",
+              desc: "Built and maintained full-stack web apps using Next.js, Material UI, .NET, and C#. Managed SQL databases, deployed on Azure, and integrated Firebase services. Used Docker for containerization and WordPress as a headless CMS.",
+              stack: [
+                "Next.js",
+                "Material UI",
+                ".NET",
+                "C#",
+                "SQL",
+                "Azure",
+                "Firebase",
+                "Docker",
+                "WordPress",
+              ],
+            },
+            {
+              role: "Software Developer Intern",
+              company: "Internship",
+              date: "Jan 2023 — May 2023",
+              desc: "Developed frontend features with React and built backend APIs using .NET and C#. Collaborated through GitLab and containerized services with Docker.",
+              stack: ["React", ".NET", "C#", "Docker", "GitLab"],
+            },
+          ].map((job, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.4, delay: i * 0.1 }}
+              className="nb-card p-6 md:p-8 flex flex-col gap-3"
+            >
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-1">
+                <h3 className="text-xl md:text-2xl font-bold text-black dark:text-white">
+                  {job.role}
+                </h3>
+                <span className="nb-tag w-max">{job.date}</span>
+              </div>
+              <p className="paragraph !mb-0 !text-base">{job.desc}</p>
+              <div className="flex flex-wrap gap-2">
+                {job.stack.map((t) => (
+                  <span key={t} className="nb-tag">
+                    {t}
+                  </span>
+                ))}
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        <h2 className="header2">Skills</h2>
+        <div className="grid grid-cols-2 xs:grid-cols-3 sm:grid-cols-4 lg:grid-cols-5 gap-4">
+          {skills.map((skill, i) => (
+            <SkillCard key={skill.name} skill={skill} index={i} />
+          ))}
+        </div>
+        <div className="flex flex-col items-center justify-center mt-40 mb-20">
+          <p className="text-[2.5rem] md:text-[3.5rem] font-bold text-black dark:text-white uppercase tracking-tight">
             next up
           </p>
 
@@ -283,7 +322,7 @@ export default function Home({ setHide, hide }) {
             }}
             whileHover={{ x: 10 }}
             transition={{ duration: 0.2 }}
-            className="flex gap-2 items-center text-[2rem] font-thin font-sans cursor-pointer"
+            className="flex gap-2 items-center text-black dark:text-white text-[1.5rem] md:text-[2rem] font-bold font-mono uppercase tracking-wider cursor-pointer"
           >
             Projects -{">"}
           </motion.p>

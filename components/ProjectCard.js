@@ -1,51 +1,54 @@
+import { motion } from "framer-motion";
+import { BsArrowUpRight } from "react-icons/bs";
+
 const ProjectCard = ({ e }) => {
-	const bg = (e) => {
-		return e === "ReactJS"
-			? "#5CCFEE"
-			: e === "NextJS"
-			? "black"
-			: e === "TailwindCSS"
-			? "#09ADC9"
-			: e === "GraphQL"
-			? "#D932A3"
-			: e === "Strapi"
-			? "#8873F2"
-			: e === "Firebase"
-			? "#F2C02A"
-			: e === "Vite"
-			? "#F2C125"
-			: e === ".NET Core"
-			? " #582B8A"
-			: e === "Chakra"
-			? "#29B5AA"
-			: e === "TypeScript"
-			? "#2F71BC"
-			: "";
-	};
-	const color = (e) => {
-		return e !== "Firebase" && e !== "Vite" ? "white" : "";
-	};
-	return (
-		<div className="px-10 py-16 text-[#3c3c3c] dark:text-white">
-			<h1 className="mb-3 text-3xl">{e.name}</h1>
-			<div className="flex flex-wrap gap-3 font-mono ">
-				{e.stack.map((e) => (
-					<p
-						className={`px-2 py-0.5 text-xs   rounded-sm `}
-						style={
-							{
-								// backgroundColor: bg(e),
-								// color: color(e),
-							}
-						}
-						key={e.name}
-					>
-						{e}
-					</p>
-				))}
-			</div>
-		</div>
-	);
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-80px" }}
+      transition={{ duration: 0.5 }}
+      className="nb-card group relative p-8 md:p-12 hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px] transition-all duration-150"
+    >
+      {e.number && (
+        <span className="absolute top-6 right-8 nb-tag">{e.number}</span>
+      )}
+      <div className="flex flex-col gap-5 text-black dark:text-white">
+        <div>
+          <h2 className="text-4xl md:text-6xl font-bold tracking-tight w-max">
+            {e.name}
+          </h2>
+          {e.tagline && (
+            <p className="mt-2 font-mono text-xs md:text-sm uppercase tracking-[0.2em] text-black/60 dark:text-white/60 font-bold">
+              {e.tagline}
+            </p>
+          )}
+        </div>
+        {e.description && (
+          <p className="paragraph !mb-0 max-w-2xl !text-left !text-base">
+            {e.description}
+          </p>
+        )}
+        <div className="flex flex-wrap gap-2 mt-1">
+          {e.stack.map((tech) => (
+            <span className="nb-tag" key={tech}>
+              {tech}
+            </span>
+          ))}
+        </div>
+        {e.link && (
+          <a
+            href={e.link}
+            target="_blank"
+            rel="noreferrer"
+            className="flex items-center gap-2 mt-2 text-sm font-mono font-bold w-max hover:underline underline-offset-4"
+          >
+            Visit project <BsArrowUpRight />
+          </a>
+        )}
+      </div>
+    </motion.div>
+  );
 };
 
 export default ProjectCard;
