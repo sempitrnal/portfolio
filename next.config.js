@@ -1,16 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-	reactStrictMode: true,
-	swcMinify: true,
-	images: {
-		domains: [
-			"1000logos.net",
-			"d1.awsstatic.com",
-			"upload.wikimedia.org",
-			"s3.dualstack.us-east-2.amazonaws.com",
-			"cdn.worldvectorlogo.com",
-		],
-	},
+  reactStrictMode: true,
+  pageExtensions: ["tsx", "ts"],
+  images: {
+    formats: ["image/avif", "image/webp"],
+    remotePatterns: [{ protocol: "https", hostname: "**" }],
+  },
 };
 
 module.exports = nextConfig;

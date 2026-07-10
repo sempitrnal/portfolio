@@ -1,0 +1,261 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Shamrock color palette */
+    --shamrock-50: 156 71% 96%;
+    --shamrock-100: 156 69% 90%;
+    --shamrock-200: 158 66% 80%;
+    --shamrock-300: 162 62% 67%;
+    --shamrock-400: 164 56% 50%;
+    --shamrock-500: 166 73% 39%;
+    --shamrock-600: 168 81% 30%;
+    --shamrock-700: 169 81% 24%;
+    --shamrock-800: 169 76% 20%;
+    --shamrock-900: 170 74% 16%;
+    --shamrock-950: 172 78% 9%;
+
+    /* Coral complementary color palette */
+    --coral-50: 20 80% 97%;
+    --coral-100: 20 80% 93%;
+    --coral-200: 20 80% 85%;
+    --coral-300: 20 80% 75%;
+    --coral-400: 20 80% 65%;
+    --coral-500: 20 80% 55%;
+    --coral-600: 20 80% 47%;
+    --coral-700: 20 80% 39%;
+    --coral-800: 20 80% 32%;
+    --coral-900: 20 80% 25%;
+    --coral-950: 20 75% 15%;
+
+    --background: var(--shamrock-50);
+    --foreground: var(--shamrock-950);
+
+    --card: var(--shamrock-100);
+    --card-foreground: var(--shamrock-950);
+
+    --popover: var(--shamrock-100);
+    --popover-foreground: var(--shamrock-950);
+
+    --primary: var(--shamrock-700);
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: var(--coral-100);
+    --secondary-foreground: var(--coral-900);
+
+    --muted: var(--shamrock-100);
+    --muted-foreground: var(--shamrock-700);
+
+    --accent: var(--shamrock-300);
+    --accent-foreground: var(--shamrock-950);
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: var(--shamrock-200);
+    --input: var(--shamrock-200);
+    --ring: var(--shamrock-500);
+    --radius: 1.25rem;
+
+    /* Warm alias tokens with coral accents */
+    --warm-cream: var(--shamrock-50);
+    --warm-sand: var(--shamrock-100);
+    --warm-clay: var(--coral-500);
+    --warm-rose: var(--coral-300);
+    --warm-sage: var(--shamrock-200);
+    --warm-denim: var(--shamrock-600);
+    --warm-lilac: var(--shamrock-400);
+    --warm-ochre: var(--coral-500);
+    --warm-ink: var(--shamrock-950);
+    --warm-paper: var(--shamrock-50);
+  }
+
+  .dark {
+    --background: 0 0% 5%;
+    --foreground: var(--shamrock-50);
+
+    --card: 0 0% 8%;
+    --card-foreground: var(--shamrock-50);
+
+    --popover: 0 0% 8%;
+    --popover-foreground: var(--shamrock-50);
+
+    --primary: var(--shamrock-400);
+    --primary-foreground: var(--shamrock-950);
+
+    --secondary: var(--coral-950);
+    --secondary-foreground: var(--coral-50);
+
+    --muted: 0 0% 12%;
+    --muted-foreground: var(--shamrock-300);
+
+    --accent: var(--shamrock-900);
+    --accent-foreground: var(--shamrock-50);
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
+    --ring: var(--shamrock-500);
+
+    --warm-cream: 0 0% 5%;
+    --warm-sand: 0 0% 8%;
+    --warm-clay: var(--coral-400);
+    --warm-rose: var(--coral-400);
+    --warm-sage: var(--shamrock-700);
+    --warm-denim: var(--shamrock-500);
+    --warm-lilac: var(--shamrock-500);
+    --warm-ochre: var(--coral-500);
+    --warm-ink: var(--shamrock-50);
+    --warm-paper: 0 0% 8%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings:
+      "rlig" 1,
+      "calt" 1;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    @apply bg-primary/30 text-foreground;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--border));
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--muted-foreground) / 0.4);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .glass {
+    @apply bg-warm-paper/75 dark:bg-warm-paper/60 backdrop-blur-2xl border border-warm-ink/5 dark:border-warm-ink/20 shadow-lg;
+  }
+
+  .glass-card {
+    @apply bg-warm-paper/85 dark:bg-warm-paper/75 backdrop-blur-xl border border-warm-ink/5 dark:border-warm-ink/20 shadow-sm;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary via-warm-rose to-warm-ochre bg-clip-text text-transparent;
+  }
+
+  .gradient-text-subtle {
+    @apply bg-gradient-to-br from-foreground to-muted-foreground bg-clip-text text-transparent;
+  }
+
+  .noise {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  }
+
+  .grain {
+    position: fixed;
+    inset: 0;
+    z-index: 40;
+    pointer-events: none;
+    opacity: 0.035;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    mix-blend-mode: overlay;
+  }
+
+  .mesh-glow {
+    background:
+      radial-gradient(
+        600px circle at 20% 20%,
+        hsl(var(--warm-rose) / 0.25),
+        transparent 40%
+      ),
+      radial-gradient(
+        500px circle at 80% 60%,
+        hsl(var(--warm-lilac) / 0.22),
+        transparent 40%
+      ),
+      radial-gradient(
+        700px circle at 50% 100%,
+        hsl(var(--warm-sage) / 0.18),
+        transparent 40%
+      );
+  }
+
+  .dot-pattern {
+    background-image: radial-gradient(
+      hsl(var(--foreground) / 0.05) 1px,
+      transparent 1px
+    );
+    background-size: 32px 32px;
+  }
+
+  .grid-pattern {
+    background-image:
+      linear-gradient(
+        to right,
+        hsl(var(--foreground) / 0.04) 1px,
+        transparent 1px
+      ),
+      linear-gradient(
+        to bottom,
+        hsl(var(--foreground) / 0.04) 1px,
+        transparent 1px
+      );
+    background-size: 48px 48px;
+  }
+
+  .section-padding {
+    @apply py-28 md:py-36 lg:py-44;
+  }
+
+  .section-container {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .editorial-heading {
+    @apply font-serif text-5xl font-medium tracking-tight text-foreground md:text-6xl lg:text-7xl;
+  }
+
+  .editorial-eyebrow {
+    @apply inline-flex items-center gap-2 font-mono text-xs font-semibold uppercase tracking-[0.2em] text-primary;
+  }
+
+  .will-change-transform {
+    will-change: transform;
+  }
+}
