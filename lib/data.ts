@@ -192,7 +192,7 @@ export const projects: Project[] = [
       "Styled with Tailwind CSS for a fast, modern interface.",
     ],
     stack: ["Next.js", "Tailwind CSS", "Supabase", "PostgreSQL"],
-    link: "https://lendz-theta.vercel.app",
+    link: "https://lendz-three.vercel.app",
     color: "#1bae8c",
   },
 ];
