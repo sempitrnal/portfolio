@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono, Playfair_Display } from "next/font/google";
 import { Providers } from "./providers";
-import { GrainOverlay } from "@/components/layout/grain-overlay";
-import { AmbientMesh } from "@/components/layout/ambient-mesh";
 import { DotPattern } from "@/components/layout/dot-pattern";
 import "./globals.css";
 
@@ -97,9 +95,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${playfair.variable} ${jbMono.variable} font-sans antialiased`}
       >
-        <AmbientMesh />
         <DotPattern />
-        <GrainOverlay />
         <Providers>{children}</Providers>
       </body>
     </html>

@@ -48,7 +48,7 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
         >
-          <Badge
+          {/* <Badge
             variant="default"
             className="mb-6 gap-2 rounded-full px-3 py-1 text-xs font-semibold"
           >
@@ -57,7 +57,7 @@ export function Hero() {
               <span className="relative inline-flex h-2 w-2 rounded-full bg-shamrock-500" />
             </span>
             {personal.availability.label}
-          </Badge>
+          </Badge> */}
         </motion.div>
 
         <motion.p
